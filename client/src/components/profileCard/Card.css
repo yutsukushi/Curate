@@ -1,0 +1,21 @@
+.card {
+    background: rgb(241, 241, 241);
+    border-radius: .5rem;
+    height: 5rem;
+    margin: 5rem;
+    margin-top: 1rem;
+    position: relative;
+    width: 270px;
+    box-shadow: 0 3px 6px rgb(119, 119, 119), 0 3px 6px rgb(119, 119, 119);
+    overflow: hidden;
+  }
+  
+  /* Slide */
+  .img-container {
+    width: 20rem;
+    height: 20rem;
+  }
+  img {
+      width: 20rem;
+      height: 20rem;
+  }
