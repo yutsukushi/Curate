@@ -6,8 +6,7 @@ function CreateAcc(props) {
     return (
       <BrowserRouter>
         <form action="/createaccount/" method="POST">
-          <p>Username: {props.username}</p>
-          <p>Password: {props.password}</p>
+          <span>Username: {props.username}</span>
           <input
             type="text"
             placeholder="Username"
@@ -15,6 +14,7 @@ function CreateAcc(props) {
             value={props.username}
             onChange={props.onChange}
           />
+          <span>Password: {props.password}</span>
           <input
             type="password"
             placeholder="Password"

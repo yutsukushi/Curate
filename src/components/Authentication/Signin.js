@@ -9,8 +9,7 @@ function SignIn(props) {
     <div>
     <BrowserRouter>
     <form action="/login" method="GET">
-        <p>Username: {props.username}</p>
-        <p>Password: {props.password}</p>
+        <span>Username: {props.username}</span>
         <input
         type="text"
         placeholder="Username"
@@ -18,6 +17,7 @@ function SignIn(props) {
         value={props.username}
         onChange={props.handleInputChange}
         />
+        <span>Password: {props.password}</span>
         <input
         type="password"
         placeholder="Password"
