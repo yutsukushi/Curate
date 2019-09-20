@@ -1,13 +1,14 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 // import CreateAcc from "./CreateAcc";
 
 function SignIn(props) {
 
   return (
     
+    <div>
     <BrowserRouter>
-      <form action="/login" method="GET">
+    <form action="/login" method="GET">
         <span>Username: {props.username}</span>
         <input
         type="text"
@@ -25,16 +26,20 @@ function SignIn(props) {
         onChange={props.handleInputChange}
         />
         <button
-        onSubmit={props.handleLogInSubmit}>
-          Sign In
+        onClick={props.handleLogInSubmit}>
+            Sign In
         </button>
-        <button 
-        onClick={props.handleOnClick}>
-          Create Account
-        </button>
-      </form>
+        
+        <div>
+            <Link to="/createaccount">
+              Create Account
+            </Link>
+        </div>
+    </form>
     </BrowserRouter>
-  )
+    </div>
+);
+
 }
 
 export default SignIn;
