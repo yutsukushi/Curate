@@ -1,21 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function NavBar() {
   return ( 
+
   <div className="header">
     <ul className="nav">
       <li className="nav-item">
-        <h1 className="title"> Artists </h1>
+        <Link to="/login" className="nav-link">Login</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="../pages/Search">Search</a>
+        <Link to="/" className="nav-link">Search</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="../pages/Saved">Saved</a>
+        <Link to="/saved" className="nav-link">Saved</Link>
       </li>
     </ul>
   </div>
+
   )
 }
 

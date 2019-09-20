@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Header() {
+function Jumbotron() {
   return ( 
     <div className="jumbotron">
         <h1 className="display-4">Goog Enheim Search</h1>
@@ -10,4 +10,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default Jumbotron;
