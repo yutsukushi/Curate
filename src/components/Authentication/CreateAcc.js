@@ -1,9 +1,10 @@
 import React from "react";
-// import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 function CreateAcc(props) {
 
     return (
+      <BrowserRouter>
         <form action="/createaccount/" method="POST">
           <span>Username: {props.username}</span>
           <input
@@ -21,10 +22,11 @@ function CreateAcc(props) {
             value={props.password}
             onChange={props.onChange}
           />
-          <button onClick={props.handleCreateAccountSubmit}>
+          <button onClick={props.handleFormSubmit}>
               Create Account
           </button>
         </form>
+      </BrowserRouter>
     );
   }
 
