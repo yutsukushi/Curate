@@ -1,21 +1,19 @@
 import React, {Component} from "react";
 import Jumbotron from "../Jumbotron"
-import axios from "axios"
-import Artist from "../../models"
+// import axios from "axios"
+// import Artist from "../../models"
 import "./style.css";
+import Axios from "axios";
 // import imageCard from "../imageCard/index";
 
 
 class SearchForm extends Component {
 
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
-      thumbnail: "",
-      title: "",
-      date: "",
-      name: "",
-      nationality: ""
+      userInput: "",
+      results: []
     }
     this.handleArtistSubmit.bind(this);
   }
@@ -30,28 +28,48 @@ class SearchForm extends Component {
 
   }
   
-  handleArtistSubmit = () => {
-    axios.get("/", function (req, res) {
-      // Query: In our database, go to the animals collection, then "find" everything
-      Artist.find({ Artist: this.state }, function (err, found) {
-        // Log any errors if the server encounters one
-        if (err) {
-          console.log(err);
-        }
-        // Otherwise, send the result of this query to the browser
-        else {
-          console.log(found);
-        }
-      });
-    });
-  }
+  handleArtistSubmit = (event) => {
+    event.preventDefault();
 
+    console.log("inside handleArtistSubmit")
+    console.log(this.state.userInput)
+
+    this.getMethod();
+   
+  }
+  
+  getMethod = () => {
+
+    // const data = new UserInput();
+    // data.append("file", this.uploadInput.files[0]);
+    // data.append('filename', this.fileName.value);
+
+    fetch("https://localhost:3000", {
+      method: "GET",
+      headers: {
+        "Content-Type": "text/plain"
+      }
+    }).then (response => {
+      return response.json()
+      .then(results => {
+        this.setState({ 
+          results: `https://localhost:3000/${results}` 
+        })
+      })
+    })
+    // Axios.get("/")
+    // .then(response => {
+    //   console.log("artist result:", response.data);
+    // }).catch((err) => {
+    //   console.log(err);
+    // })
+  }
   render() {
     return (
       <div>
         <Jumbotron />
         <div className="container">
-          <form className="form-group" action="/submit" method="GET">
+          <form className="form-group" action="/" method="GET">
             <label>Artist Search</label>
             <input 
               type="text" 

@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import { Router } from "react-router-dom"
 import App from "./App"
 import * as serviceWorker from './serviceWorker';
-import createHistory from 'history/createBrowserHistory'
-import './index.css';
+var stuff = require("history").createBrowserHistory;
 
-const history = createHistory()
+const history = stuff()
 
 ReactDOM.render(
 <Router history={history}> 
