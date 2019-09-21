@@ -9,19 +9,18 @@ var router = require("./router")
 // var bodyparser = require("body-parser")
 // var fileupload = require("express-fileupload")
 mongoose.set('useCreateIndex', true);
-// var cors = require('cors')
+var cors = require('cors');
 
 var PORT = process.env.PORT || 3001;
 
 //Initialize Express
 var app = express();
-
+app.use(cors())
 // Add routes, both API and view
 app.use(router);
 
 // Middleware
 // app.use(logger("dev"));
-// app.use(cors())
 
 //Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
