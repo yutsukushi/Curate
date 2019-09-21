@@ -12,8 +12,12 @@ class SearchForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      userInput: "",
-      results: []
+      name: "",
+      art_title: "",
+      art_date: "",
+      nationality: "",
+      url: "",
+      thumbnail: ""
     }
     this.handleArtistSubmit.bind(this);
   }
@@ -88,8 +92,8 @@ class SearchForm extends Component {
             <div className="card img-container hover">
               <img src={this.state.thumbnail} alt="artwork"></img>
               <ul>
-                <li className="art_title">{this.state.title}Art Title</li>
-                <li className="art_date">{this.state.date}Date Created</li>
+                <li className="art_title">{this.state.art_title}Art Title</li>
+                <li className="art_date">{this.state.art_date}Date Created</li>
                 <li className="artist_name">{this.state.name}Artist Name</li>
                 <li className="nationality">{this.state.nationality}Artist Nationality</li>
               </ul>
