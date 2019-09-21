@@ -1,20 +1,20 @@
 const router = require("express").Router();
-const booksController = require("../../controllers/booksController");
+const artistsController = require("../../controllers/artistsController");
 
 
-// Matches with "/api/books" and adds the forwards slash to be localhost:3001/api/books/
+// Matches with "/api/artists" and adds the forwards slash to be localhost:3001/api/artists/
 // here we declare .get and .post that are able to be used under the same route.
 // now we look into the booksController file
 router.route("/")
-  .get(booksController.findAll)
-  .post(booksController.create);
+  .get(artistsController.findAll)
+  .post(artistsController.create);
 
 
-// Matches with "/api/books/:id"
+// Matches with "/api/artists/:Artist"
 router
-  .route("/:id")
-  .get(booksController.findById)
-  .put(booksController.update)
-  .delete(booksController.remove);
+  .route("/:artists")
+  .get(artistsController.findById)
+  .put(artistsController.update)
+  .delete(artistsController.remove);
 
 module.exports = router;
