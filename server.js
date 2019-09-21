@@ -15,11 +15,11 @@ var routes = require("./routes");
 
 var PORT = process.env.PORT || 3001;
 
-// Add routes, both API and view
-app.use(routes);
-
 //Initialize Express
 var app = express();
+
+// Add routes, both API and view
+app.use(routes);
 
 // Middleware
 app.use(logger("dev"));
