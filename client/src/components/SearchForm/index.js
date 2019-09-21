@@ -37,37 +37,8 @@ class SearchForm extends Component {
 
     console.log("inside handleArtistSubmit")
     console.log(this.state.userInput)
-
-    this.getMethod();
-   
   }
   
-  getMethod = () => {
-
-    // const data = new UserInput();
-    // data.append("file", this.uploadInput.files[0]);
-    // data.append('filename', this.fileName.value);
-
-    fetch("https://localhost:3000", {
-      method: "GET",
-      headers: {
-        "Content-Type": "text/plain"
-      }
-    }).then (response => {
-      return response.json()
-      .then(results => {
-        this.setState({ 
-          results: `https://localhost:3000/${results}` 
-        })
-      })
-    })
-    // Axios.get("/")
-    // .then(response => {
-    //   console.log("artist result:", response.data);
-    // }).catch((err) => {
-    //   console.log(err);
-    // })
-  }
   render() {
     return (
       <div>
