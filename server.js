@@ -2,9 +2,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var axios = require("axios");
-
-var routes = require("./routes");
-// var cheerio = require("cheerio");
+var routes = require("./routes")
 // var path = require("path");
 // var logger = require("morgan");
 // var mongojs = require("mongojs")
