@@ -3,7 +3,7 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Artist
-      .find(req.query)
+      .find({ Artist: req.query.name}) // e.g. "Otto Wagner"
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
