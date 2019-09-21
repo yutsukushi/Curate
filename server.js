@@ -22,7 +22,7 @@ var app = express();
 app.use(routes);
 
 // Middleware
-app.use(logger("dev"));
+// app.use(logger("dev"));
 // app.use(cors())
 
 //Parse request body as JSON
