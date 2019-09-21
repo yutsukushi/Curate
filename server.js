@@ -2,7 +2,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var axios = require("axios");
-var routes = require("./routes")
+var router = require("./router")
 // var path = require("path");
 // var logger = require("morgan");
 // var mongojs = require("mongojs")
@@ -17,7 +17,7 @@ var PORT = process.env.PORT || 3001;
 var app = express();
 
 // Add routes, both API and view
-app.use(routes);
+app.use(router);
 
 // Middleware
 // app.use(logger("dev"));
