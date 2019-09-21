@@ -99,6 +99,7 @@ class SearchForm extends Component {
               </ul>
             </div>
           </div>
+          <pre>{JSON.stringify(this.state, null, 2)}</pre>
         </div>
       </div>
     );
