@@ -8,7 +8,7 @@ var routes = require("./routes")
 // var mongojs = require("mongojs")
 // var bodyparser = require("body-parser")
 // var fileupload = require("express-fileupload")
-// mongoose.set('useCreateIndex', true);
+mongoose.set('useCreateIndex', true);
 // var cors = require('cors')
 
 var PORT = process.env.PORT || 3001;
