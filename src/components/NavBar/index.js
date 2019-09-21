@@ -7,6 +7,11 @@ function NavBar() {
 
   <div className="header">
     <ul className="nav">
+      <li className=" nav-item logo-container">
+        <h1 className="display-4" to="/">Goog Enheim
+          <Link to="/"></Link>
+        </h1>
+      </li>
       <li className="nav-item">
         <Link to="/login" className="nav-link">Login</Link>
       </li>
