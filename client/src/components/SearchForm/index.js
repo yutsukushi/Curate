@@ -72,6 +72,7 @@ class SearchForm extends Component {
           <form className="form-group" action="/" method="GET">
             <label>Artist Search</label>
             <input 
+              name="name"
               type="text" 
               className="form-control" 
               placeholder="Search for artist" 
