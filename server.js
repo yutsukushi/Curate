@@ -2,28 +2,25 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var axios = require("axios");
-
-var routes = require("./routes");
-// var cheerio = require("cheerio");
+var router = require("./router")
 // var path = require("path");
 // var logger = require("morgan");
 // var mongojs = require("mongojs")
 // var bodyparser = require("body-parser")
 // var fileupload = require("express-fileupload")
-// mongoose.set('useCreateIndex', true);
-// var cors = require('cors')
+mongoose.set('useCreateIndex', true);
+var cors = require('cors');
 
 var PORT = process.env.PORT || 3001;
 
-// Add routes, both API and view
-app.use(routes);
-
 //Initialize Express
 var app = express();
+app.use(cors())
+// Add routes, both API and view
+app.use(router);
 
 // Middleware
-app.use(logger("dev"));
-// app.use(cors())
+// app.use(logger("dev"));
 
 //Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));

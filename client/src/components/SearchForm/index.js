@@ -12,8 +12,12 @@ class SearchForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      userInput: "",
-      results: []
+      name: "",
+      art_title: "",
+      art_date: "",
+      nationality: "",
+      url: "",
+      thumbnail: ""
     }
     this.handleArtistSubmit.bind(this);
   }
@@ -33,37 +37,8 @@ class SearchForm extends Component {
 
     console.log("inside handleArtistSubmit")
     console.log(this.state.userInput)
-
-    this.getMethod();
-   
   }
   
-  getMethod = () => {
-
-    // const data = new UserInput();
-    // data.append("file", this.uploadInput.files[0]);
-    // data.append('filename', this.fileName.value);
-
-    fetch("https://localhost:3000", {
-      method: "GET",
-      headers: {
-        "Content-Type": "text/plain"
-      }
-    }).then (response => {
-      return response.json()
-      .then(results => {
-        this.setState({ 
-          results: `https://localhost:3000/${results}` 
-        })
-      })
-    })
-    // Axios.get("/")
-    // .then(response => {
-    //   console.log("artist result:", response.data);
-    // }).catch((err) => {
-    //   console.log(err);
-    // })
-  }
   render() {
     return (
       <div>
@@ -72,6 +47,7 @@ class SearchForm extends Component {
           <form className="form-group" action="/" method="GET">
             <label>Artist Search</label>
             <input 
+              name="name"
               type="text" 
               className="form-control" 
               placeholder="Search for artist" 
@@ -87,13 +63,14 @@ class SearchForm extends Component {
             <div className="card img-container hover">
               <img src={this.state.thumbnail} alt="artwork"></img>
               <ul>
-                <li className="art_title">{this.state.title}Art Title</li>
-                <li className="art_date">{this.state.date}Date Created</li>
+                <li className="art_title">{this.state.art_title}Art Title</li>
+                <li className="art_date">{this.state.art_date}Date Created</li>
                 <li className="artist_name">{this.state.name}Artist Name</li>
                 <li className="nationality">{this.state.nationality}Artist Nationality</li>
               </ul>
             </div>
           </div>
+          <pre>{JSON.stringify(this.state, null, 2)}</pre>
         </div>
       </div>
     );
