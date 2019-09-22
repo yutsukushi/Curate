@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Jumbotron from "../Jumbotron"
-// import axios from "axios"
 // import Artist from "../../models"
 import "./style.css";
 import Axios from "axios";
@@ -13,11 +12,7 @@ class SearchForm extends Component {
     super(props)
     this.state = {
       name: "",
-      art_title: "",
-      art_date: "",
-      nationality: "",
-      url: "",
-      thumbnail: ""
+      serverResponse: null
     }
     this.handleArtistSubmit.bind(this);
   }
@@ -34,9 +29,16 @@ class SearchForm extends Component {
   
   handleArtistSubmit = (event) => {
     event.preventDefault();
-
     console.log("inside handleArtistSubmit")
-    console.log(this.state.userInput)
+    Axios.get("/api/artists/", {
+      params: {
+        name: this.state.name
+      }
+    })
+    .then(res => {
+      console.log('handleArtistSubmit: res: ', res);
+    this.setState({serverResponse: res.data});
+    })
   }
   
   render() {
