@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SignIn from "./components/Authentication/Signin"
+import SignIn from "./components/SignIn"
 import CreateAcc from "./components/Authentication/CreateAcc";
 import NavBar from "./components/NavBar";
 import SearchForm from "./components/SearchForm";
