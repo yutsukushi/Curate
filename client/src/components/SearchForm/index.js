@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-// import Artist from "../../models"
-import "./style.css";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import { List, ListItem } from "../List";
+import "./style.css";
 
 // import imageCard from "../imageCard/index";
 
@@ -13,7 +13,7 @@ class SearchForm extends Component {
     super(props)
     this.state = {
       name: "",
-      serverResponse: null
+      serverResponse: []
     }
     this.handleArtistSubmit.bind(this);
   }
@@ -83,16 +83,30 @@ class SearchForm extends Component {
         </div>
         <div>
           <div>
-            <div className="card img-container hover">
-              <img src={this.state.thumbnail} alt="artwork"></img>
-              <ul>
-                <li className="art_title">{this.state.art_title}Art Title</li>
-                <li className="art_date">{this.state.art_date}Date Created</li>
-                <li className="artist_name">{this.state.name}Artist Name</li>
-                <li className="nationality">{this.state.nationality}Artist Nationality</li>
-              </ul>
-            </div>
+            {this.state.serverResponse.length ? (
+              <List>
+                {this.state.serverResponse.map(card => (
+                  <ListItem 
+                    key={card._id}
+                    alt={card.Artist} 
+                    image={card.ThumbnailURL}>
+                  <div className="card img-container hover">
+                  <img src={card.ThumbnailURL} alt="artwork"></img>
+                    <ul>
+                      <li className="art_title">{card.Title}</li>
+                      <li className="art_date">{card.Date}</li>
+                      <li className="artist_name">{card.Artist}</li>
+                      <li className="nationality">{card.Nationality}</li>
+                    </ul>
+                  </div>
+                  </ListItem>
+                ))}
+            </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
           </div>
+          {/* TESTING PURPOSEs */}
           <pre>{JSON.stringify(this.state, null, 2)}</pre>
         </div>
       </div>
