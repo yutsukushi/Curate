@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import Jumbotron from "../Jumbotron"
 // import Artist from "../../models"
 import "./style.css";
 import Axios from "axios";
+import { Link } from "react-router-dom";
+
 // import imageCard from "../imageCard/index";
 
 
@@ -44,23 +45,43 @@ class SearchForm extends Component {
   render() {
     return (
       <div>
-        <Jumbotron />
-        <div className="container">
-          <form className="form-group" action="/" method="GET">
-            <label>Artist Search</label>
-            <input 
-              name="name"
-              type="text" 
-              className="form-control" 
-              placeholder="Search for artist" 
-              onChange={this.handleInputChange} />
-            <button 
-              type="submit" 
-              className="btn btn-primary" 
-              onClick={this.handleArtistSubmit}>
-                Search
-            </button>
-          </form>
+        <div className="header">
+          <ul className="nav">
+            <li className=" nav-item logo-container">
+              <h1 className="display-4" to="/">Goog Enheim
+                <Link to="/"></Link>
+              </h1>
+            </li>
+            <div className="container">
+              <div className="searchContainer">
+                <form className="form-group" action="/" method="GET">
+                  <input 
+                    name="name"
+                    type="text" 
+                    className="form-control" 
+                    placeholder="Search for artist" 
+                    onChange={this.handleInputChange} />
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary btn-search" 
+                    onClick={this.handleArtistSubmit}>
+                      Search
+                  </button>
+                </form>
+              </div>
+            </div>
+            <li className="nav-item nav-item-link">
+              <Link to="/login" className="nav-link">Login</Link>
+            </li>
+            <li className="nav-item nav-item-link">
+              <Link to="/" className="nav-link">Search</Link>
+            </li>
+            <li className="nav-item nav-item-link">
+              <Link to="/saved" className="nav-link">Saved</Link>
+            </li>
+          </ul>
+        </div>
+        <div>
           <div>
             <div className="card img-container hover">
               <img src={this.state.thumbnail} alt="artwork"></img>
