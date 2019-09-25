@@ -52,7 +52,7 @@ class SearchForm extends Component {
                 <Link to="/"></Link>
               </h1>
             </li>
-            <div className="container">
+            <li className="container">
               <div className="searchContainer">
                 <form className="form-group" action="/" method="GET">
                   <input 
@@ -63,13 +63,13 @@ class SearchForm extends Component {
                     onChange={this.handleInputChange} />
                   <button 
                     type="submit" 
-                    className="btn btn-primary btn-search" 
+                    className=" btn-search" 
                     onClick={this.handleArtistSubmit}>
                       Search
                   </button>
                 </form>
               </div>
-            </div>
+            </li>
             <li className="nav-item nav-item-link">
               <Link to="/login" className="nav-link">Login</Link>
             </li>

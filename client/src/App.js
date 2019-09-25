@@ -4,6 +4,7 @@ import SignIn from "./components/Authentication/Signin"
 import CreateAcc from "./components/Authentication/CreateAcc";
 import SearchForm from "./components/SearchForm";
 import Saved from "./components/SavedArtists/Saved"
+import "normalize.css";
 import './App.css';
 
 function App() {
