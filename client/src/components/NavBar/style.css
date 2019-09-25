@@ -7,5 +7,28 @@
 .logo-container {
     display: flex;
     flex-flow: column;
+    align-items: flex-start;
     max-width: 6rem;
+    padding: 1rem;
+}
+.nav-item-link {
+    display: flex;
+    flex: 0 1 auto;
+    align-content: flex-end;
+    flex-flow: column wrap;
+    padding: 1rem;
+    font-weight: 100;
+}
+.nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+.btn-search{
+    display: flex;
+    flex-flow: column wrap;
+}
+.form-group {
+    display: flex;
+    flex-flow: column nowrap;
 }

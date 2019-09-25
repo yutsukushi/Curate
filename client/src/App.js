@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignIn from "./components/SignIn"
 import CreateAcc from "./components/Authentication/CreateAcc";
-import NavBar from "./components/NavBar";
 import SearchForm from "./components/SearchForm";
 import Saved from "./components/SavedArtists/Saved"
 import './App.css';
@@ -10,8 +9,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-    <div>
-      <NavBar />
+    <span className="">
       <Switch>
         <Route exact path="/login" component={ SignIn }/>
         <Route exact path="/createaccount/" component={ CreateAcc }/>
@@ -20,7 +18,7 @@ function App() {
         {/* <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} /> */}
       </Switch>
-    </div>
+    </span>
     </Router>
   );
 }
