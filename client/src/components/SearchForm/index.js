@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../List";
+import ImageCard from "../ImageCard"
 import "./style.css";
 
 // import imageCard from "../imageCard/index";
@@ -90,15 +91,12 @@ class SearchForm extends Component {
                     key={card._id}
                     alt={card.Artist} 
                     image={card.ThumbnailURL}>
-                  <div className="card img-container hover">
-                  <img src={card.ThumbnailURL} alt="artwork"></img>
-                    <ul>
-                      <li className="art_title">{card.Title}</li>
-                      <li className="art_date">{card.Date}</li>
-                      <li className="artist_name">{card.Artist}</li>
-                      <li className="nationality">{card.Nationality}</li>
-                    </ul>
-                  </div>
+                    <ImageCard 
+                    thumbnail={card.ThumbnailURL} 
+                    title={card.Title} 
+                    date={card.Date} 
+                    medium={card.Medium}
+                    name={card.Artist} nationality={card.Nationality} /> 
                   </ListItem>
                 ))}
             </List>

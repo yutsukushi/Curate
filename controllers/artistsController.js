@@ -1,6 +1,6 @@
 const db = require("../models");
 
-const ARTIST_FIELDS = 'Title Artist Nationality Date URL ThumbnailURL';
+const ARTIST_FIELDS = 'Title Artist Nationality Date URL Medium ThumbnailURL';
 
 module.exports = {
   findAll: function(req, res) {
