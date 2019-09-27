@@ -20,14 +20,26 @@ var UserSchema = new Schema({
       },
       "Password must be more than 5 characters."
     ]
+  }, 
+
+  favorites: {
+    artworks: {
+      Artist: "",
+      Title:"",
+      Nationality: "",
+      Medium: "",
+      Date: "",
+      ThumbnailURL: "",
+      URL: "" 
+    }
   }
 });
 
 var User = mongoose.model("User", UserSchema);
 
-module.exports = mongoose.model('User',{
-    username: String,
-    password: String
-});
+// module.exports = mongoose.model('User',{
+//     username: String,
+//     password: String
+// });
 
 module.exports = User;

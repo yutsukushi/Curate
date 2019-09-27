@@ -16,8 +16,6 @@ function App() {
         <Route exact path="/createaccount/" component={ CreateAcc }/>
         <Route exact path="/" component={ SearchForm } />
         <Route exact path="/saved" component= { Saved } />
-        {/* <Route exact path="/books/:id" component={Detail} />
-        <Route component={NoMatch} /> */}
       </Switch>
     </span>
     </Router>

@@ -4,8 +4,7 @@ var Schema = mongoose.Schema;
 
 var ArtistSchema = new Schema({
     id: {
-        type: Number,
-        unique: true
+        type: Number
     },
     name: {
         type: String,
