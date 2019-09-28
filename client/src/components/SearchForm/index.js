@@ -1,9 +1,10 @@
 import React, {Component} from "react";
 import Axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { List, ListItem } from "../List";
 import ImageCard from "../ImageCard";
 import { NavBar } from "../NavBar";
+import { Logo } from "../Logo";
 import "./style.css";
 
 class SearchForm extends Component {
@@ -40,17 +41,21 @@ class SearchForm extends Component {
     this.setState({serverResponse: res.data});
     })
   }
+
+  handleSaveArtist = (event) => {
+    event.preventDefault();
+    Axios.post("/saved", {
+      favorites: {
+        artworks: this.state
+      }
+    })
+  }
   
   render() {
     return (
       <div>
         <div className="header">
-          <ul className="nav">
-            <li className=" nav-item logo-container">
-              <h1 className="display-4" to="/">Goog Enheim
-                <Link to="/"></Link>
-              </h1>
-            </li>
+            <Logo />
             <li className="container">
               <div className="searchContainer">
                 <form className="form-group" action="/" method="GET">
@@ -70,16 +75,6 @@ class SearchForm extends Component {
               </div>
             </li>
             <NavBar />
-            {/* <li className="nav-item nav-item-link">
-              <Link to="/login" className="nav-link">Login</Link>
-            </li>
-            <li className="nav-item nav-item-link">
-              <Link to="/" className="nav-link">Search</Link>
-            </li>
-            <li className="nav-item nav-item-link">
-              <Link to="/saved" className="nav-link">Saved</Link>
-            </li> */}
-          </ul>
         </div>
         <div>
           <div>
@@ -95,7 +90,10 @@ class SearchForm extends Component {
                     title={card.Title} 
                     date={card.Date} 
                     medium={card.Medium}
-                    name={card.Artist} nationality={card.Nationality} /> 
+                    name={card.Artist} 
+                    nationality={card.Nationality}
+                    handleSaveArtist={card.handleSaveArtist} 
+                    /> 
                   </ListItem>
                 ))}
             </List>

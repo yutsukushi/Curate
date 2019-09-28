@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
 import "./style.css";
+import { Link } from "react-router-dom";
 // import CreateAcc from "./CreateAcc";
 
 function SignIn(props) {

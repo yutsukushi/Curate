@@ -13,6 +13,9 @@ const ImageCard = props => (
         <li className="art_date">{props.date}</li>
         <li className="nationality">{props.nationality}</li>
       </ul>
+      <form action="/saved" method="POST">
+      <button className="saveArt" onClick={props.handleSaveArtist}>+</button></form>
+      <button className="profileButton" >View Profile</button>
   </div>
 );
 
