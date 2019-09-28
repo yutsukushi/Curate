@@ -3,7 +3,7 @@ import Axios from "axios";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../List";
 import ImageCard from "../ImageCard";
-import { Navbar } from "../Navbar";
+import { NavBar } from "../NavBar";
 import "./style.css";
 
 class SearchForm extends Component {
@@ -69,7 +69,7 @@ class SearchForm extends Component {
                 </form>
               </div>
             </li>
-            <Navbar />
+            <NavBar />
             {/* <li className="nav-item nav-item-link">
               <Link to="/login" className="nav-link">Login</Link>
             </li>

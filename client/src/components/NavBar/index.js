@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css"
 
-export function Navbar() {
+export function NavBar() {
     return (
-        <div>
+        <div className="nav-link-container">
             <li className="nav-item nav-item-link">
                 <Link to="/login" className="nav-link">Login</Link>
             </li>
