@@ -43,12 +43,6 @@
     max-width: 100%;
     justify-content: center;
 }
-.nav-link-container{
-    display: flex;
-    flex: 1 1 auto;
-    flex-flow: column nowrap;
-    max-width: 70%;
-}
 .form-control {
     display: flex;
     flex: 1 1 auto;
@@ -81,9 +75,6 @@
     margin: .5rem;
 }
 @media (max-width: 768px) {
-    .container {
-        order: 2;
-    }
     .searchContainer {
         order: 2;
         max-width: 100%;
@@ -100,11 +91,6 @@
         flex-flow: row;
         justify-content: flex-end;
         padding: 1rem;
-    }
-    .nav-item-link {
-        order: 3;
-        display: flex;
-        flex: 0 1 auto;
     }
     .nav {
         display: flex;
@@ -156,18 +142,9 @@
         justify-content: center;
         text-align: center;
     }
-    .nav-item-link {
-        display: flex;
-        flex: 0 1 auto;
-    }
     .nav {
         display: flex;
         flex-flow: row wrap;
-    }
-    .nav-link-container{
-        order: 2;
-        display: flex;
-        flex: 1 1 auto;
     }
     .form-control {
         display: flex;
