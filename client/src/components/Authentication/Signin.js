@@ -31,7 +31,7 @@ function SignIn(props) {
         </button>
         
         <div>
-            <Link to="/createaccount">
+            <Link to="/createaccount/">
               Create Account
             </Link>
         </div>
