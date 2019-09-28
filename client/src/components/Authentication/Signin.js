@@ -7,8 +7,6 @@ function SignIn(props) {
 
   return (
     
-    <div>
-    <BrowserRouter>
     <div className="containerLogin">
       <div className="loginForm">
         <form action="/login" method="GET">
@@ -45,8 +43,6 @@ function SignIn(props) {
             </div>
         </form>
       </div>
-    </div>
-    </BrowserRouter>
     </div>
 );
 
