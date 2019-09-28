@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import CreateAcc from "./CreateAcc";
 
 function SignIn(props) {
@@ -7,7 +7,6 @@ function SignIn(props) {
   return (
     
     <div>
-    <BrowserRouter>
     <form action="/login" method="GET">
         <span>Username: {props.username}</span>
         <input
@@ -36,7 +35,6 @@ function SignIn(props) {
             </Link>
         </div>
     </form>
-    </BrowserRouter>
     </div>
 );
 
