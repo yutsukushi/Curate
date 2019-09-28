@@ -2,11 +2,9 @@ import React, {Component} from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../List";
-import ImageCard from "../ImageCard"
+import ImageCard from "../ImageCard";
+import { Navbar } from "../Navbar";
 import "./style.css";
-
-// import imageCard from "../imageCard/index";
-
 
 class SearchForm extends Component {
 
@@ -64,14 +62,15 @@ class SearchForm extends Component {
                     onChange={this.handleInputChange} />
                   <button 
                     type="submit" 
-                    className=" btn-search" 
+                    className="btn-search" 
                     onClick={this.handleArtistSubmit}>
                       Search
                   </button>
                 </form>
               </div>
             </li>
-            <li className="nav-item nav-item-link">
+            <Navbar />
+            {/* <li className="nav-item nav-item-link">
               <Link to="/login" className="nav-link">Login</Link>
             </li>
             <li className="nav-item nav-item-link">
@@ -79,7 +78,7 @@ class SearchForm extends Component {
             </li>
             <li className="nav-item nav-item-link">
               <Link to="/saved" className="nav-link">Saved</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>
