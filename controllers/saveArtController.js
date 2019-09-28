@@ -1,5 +1,7 @@
 const db = require("../models");
 
+// const USER_FIELDS = 'username password';
+
 module.exports = {
 
 findAndSaveArt: function(req, res) {

@@ -3,29 +3,31 @@ import { Link } from "react-router-dom";
 import Axios from "axios";
 // import CreateAcc from "./CreateAcc";
 
-const handleLogInSubmit = (event) => {
-  event.preventDefault();
-  Axios.get("/api/users/", {
-    params: {
-      username: "",
-      password: ""
-    }
-  })
-    .then(res => {
-      console.log("User has logged in: " + res)
-    })
 
-}
 
 class SignIn extends Component {
   state = {
-    username: "Dustin",
-    password: "1234"
+    username: "",
+    password: ""
+  }
+
+  handleLogInSubmit = (event) => {
+    event.preventDefault();
+    Axios.get("/api/users/", {
+      params: {
+        username: this.state.username,
+        password: this.state.password
+      }
+    })
+      .then(res => {
+        console.log("User has logged in: " + res)
+      })
+  
   }
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
-    debugger;
+    
 
     this.setState({
       [name]: value
@@ -53,7 +55,7 @@ class SignIn extends Component {
           onChange={this.handleInputChange}
         />
         <button
-          onClick={handleLogInSubmit}>
+          onClick={this.handleLogInSubmit}>
           Sign In
           </button>
 
