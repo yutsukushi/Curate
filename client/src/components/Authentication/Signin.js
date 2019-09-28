@@ -1,43 +1,72 @@
-import React from "react";
+import React, {Component} from "react";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 // import CreateAcc from "./CreateAcc";
 
-function SignIn(props) {
+const handleLogInSubmit = (event) => {
+  event.preventDefault();
+  Axios.get("/api/users/", {
+    params: {
+      username: "",
+      password: ""
+    }
+  })
+    .then(res => {
+      console.log("User has logged in: " + res)
+    })
 
+}
+
+class SignIn extends Component {
+  state = {
+    username: "Dustin",
+    password: "1234"
+  }
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    debugger;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  render (props) {
   return (
-    
     <div>
-    <form action="/login" method="GET">
-        <span>Username: {props.username}</span>
+      <form action="/login" method="GET">
+        <span>Username: </span>
         <input
-        type="text"
-        placeholder="Username"
-        name="username"
-        value={props.username}
-        onChange={props.handleInputChange}
+          type="text"
+          placeholder="Username"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleInputChange}
         />
-        <span>Password: {props.password}</span>
+        <span>Password: </span>
         <input
-        type="password"
-        placeholder="Password"
-        name="password"
-        value={props.password}
-        onChange={props.handleInputChange}
+          type="password"
+          placeholder="Password"
+          name="password"
+          value={this.state.password}
+          onChange={this.handleInputChange}
         />
         <button
-        onClick={props.handleLogInSubmit}>
-            Sign In
-        </button>
-        
-        <div>
-            <Link to="/createaccount/">
-              Create Account
-            </Link>
-        </div>
-    </form>
-    </div>
-);
+          onClick={handleLogInSubmit}>
+          Sign In
+          </button>
 
+        <div>
+          <Link to="/createaccount/">
+            Create Account
+          </Link>
+          <pre>{JSON.stringify(this.state)}</pre>
+        </div>
+      </form>
+    </div>
+  );
+}
 }
 
 export default SignIn;
