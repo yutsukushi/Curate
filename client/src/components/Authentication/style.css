@@ -1,0 +1,33 @@
+html,body { height:100%; }
+
+.containerLogin {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.loginForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+}
+.containerLogo {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(37, 37, 37);
+
+    /* will be "on top", if browser supports it */
+    background-image: linear-gradient(rgb(73, 73, 73), rgb(37, 37, 37));
+
+    /* these will reset other properties, like background-position, but it does know what you mean */
+    background: rgb(37, 37, 37);
+    background: linear-gradient(rgb(73, 73, 73), rgb(37, 37, 37));
+
+    width: 50%;
+    height: 100%;
+}
