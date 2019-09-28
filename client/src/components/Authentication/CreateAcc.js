@@ -1,5 +1,5 @@
 import React,{ Component } from "react";
-import { BrowserRouter, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 class CreateAcc extends Component {
@@ -50,7 +50,6 @@ class CreateAcc extends Component {
     }
 
     return (
-      <BrowserRouter>
         <form action="/createaccount/" method="POST">
           <span>Username:</span>
           <input
@@ -72,7 +71,6 @@ class CreateAcc extends Component {
               Create Account
           </button>
         </form>
-      </BrowserRouter>
     );
   }
     

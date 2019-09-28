@@ -40,6 +40,15 @@ class SearchForm extends Component {
     this.setState({serverResponse: res.data});
     })
   }
+
+  handleSaveArtist = (event) => {
+    event.preventDefault();
+    Axios.post("/saved", {
+      favorites: {
+        artworks: this.state
+      }
+    })
+  }
   
   render() {
     return (
@@ -95,7 +104,10 @@ class SearchForm extends Component {
                     title={card.Title} 
                     date={card.Date} 
                     medium={card.Medium}
-                    name={card.Artist} nationality={card.Nationality} /> 
+                    name={card.Artist} 
+                    nationality={card.Nationality}
+                    handleSaveArtist={card.handleSaveArtist} 
+                    /> 
                   </ListItem>
                 ))}
             </List>
