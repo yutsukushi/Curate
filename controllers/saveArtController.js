@@ -3,7 +3,7 @@ const db = require("../models");
 const USER_FIELDS = 'username password';
 
 module.exports = {
-  findAll: function (req, res) {
+  findUserAndPW: function (req, res) {
     console.log('findAll req.query: ', req.query);
     var userName = req.query.username; // e.g. "usernameXYZ1"
     var passWord = req.query.password; // e.g. "password123"

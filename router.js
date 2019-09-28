@@ -24,7 +24,7 @@ router
 
 router
   .route("/api/users/")
-  .get(saveArtController.findAll);
+  .get(saveArtController.findUserAndPW);
 
 module.exports = router;
 // If no API routes are hit, send the React app
