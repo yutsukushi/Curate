@@ -1,13 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
+import { NavBar } from "../NavBar";
+// import { Link } from "react-router-dom";
+import { Logo } from "../Logo";
 
-function Saved() {
+class Saved extends Component {
 
-    
-    return (
-        <div>
-        <h4>Populate saved cards here.</h4>
-        </div>
-    )
+    state = {
+        savedArt: []
+    };
+
+    render() {
+        return (
+            <div className="header">
+                <Logo />
+                <NavBar />
+                <h4>Saved</h4>
+                <div className="savedArt">
+                    <h4>Saved works here.</h4>
+                </div>
+            </div>
+        )
+    }
     
 }
 
