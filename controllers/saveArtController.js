@@ -1,4 +1,5 @@
 const db = require("../models");
+const _ = require("lodash");
 
 const USER_FIELDS = 'username password';
 
@@ -23,19 +24,47 @@ module.exports = {
       }).catch(err => res.status(422).json(err));
   },
 
-  findAndSaveArt: function (req, res) {
+  findAndSaveArt: async function (req, res) {
     console.log(`findAndSaveArt 
     req.query: ${(JSON.stringify(req.query))} 
     cookies: ${JSON.stringify(req.cookies)} 
     req.body: ${JSON.stringify(req.body)}`);
-
     var userLogin = req.cookies.username;
-    db.User
-      .findOneAndUpdate(
-        { username: userLogin }, 
-        { $push: { favorite_artworks: req.body }}
-        )
-      .then(userArts => res.json(userArts))
-      .catch(err => res.status(422).json(err));
+    var favArtworkId = req.body._id;
+
+    try {
+      let userArts = await db.User.findOne({ username: userLogin });
+      console.log("userArts: " + userArts.favorite_artworks)
+      let artID = _.find(userArts.favorite_artworks, {_id: favArtworkId});
+      console.log("artID: " + artID)
+      if (artID === undefined) {
+        // insert new fav art into user record
+        let userArts2 = await db.User.findOneAndUpdate(
+          { username: userLogin },
+          { $push: { favorite_artworks: req.body }});
+          console.log("userArts2: " + userArts2)
+          return res.json(userArts2);
+      }
+      else {
+        // this artwork is already favorited by this user
+        return res.status(400).json({"error": "This has already been saved."});
+      }
+      
+    }
+    catch (err) {
+      console.log(err)
+      return res.status(422).json(err);
+    }
+    
+
+
+
+    // db.User
+    //   .findOneAndUpdate(
+    //     { username: userLogin }, 
+    //     { $push: { favorite_artworks: req.body }}
+    //     )
+    //   .then(userArts => res.json(userArts))
+    //   .catch(err => res.status(422).json(err));
   },
 }
