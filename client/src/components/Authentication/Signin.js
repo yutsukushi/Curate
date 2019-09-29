@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import Axios from "axios";
 // import CreateAcc from "./CreateAcc";
 
@@ -20,8 +21,11 @@ class SignIn extends Component {
       }
     })
       .then(res => {
-        console.log("User has logged in: " + res)
-      })
+        console.log(`User has logged in as ${res.username}`)
+        this.props.history.push("/");
+      }).catch(err => {
+        console.log(err);
+      } )
   
   }
 
@@ -71,4 +75,5 @@ class SignIn extends Component {
 }
 }
 
+SignIn = withRouter(SignIn);
 export default SignIn;
