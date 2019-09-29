@@ -7,6 +7,7 @@ var router = require("./router")
 // var logger = require("morgan");
 // var mongojs = require("mongojs")
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser')
 // var fileupload = require("express-fileupload")
 mongoose.set('useCreateIndex', true);
 var cors = require('cors');
@@ -15,6 +16,7 @@ var PORT = process.env.PORT || 3001;
 
 //Initialize Express
 var app = express();
+app.use(cookieParser())
 
 app.use(cors());
 
