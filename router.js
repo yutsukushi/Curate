@@ -22,6 +22,10 @@ router
   .route("/saved")
   .post(saveArtController.findAndSaveArt);
 
+router
+  .route("/api/users/")
+  .get(saveArtController.findUserAndPW);
+
 module.exports = router;
 // If no API routes are hit, send the React app
 // router.use(function(req, res) {

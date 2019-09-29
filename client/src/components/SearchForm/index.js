@@ -6,6 +6,7 @@ import ImageCard from "../ImageCard";
 import { NavBar } from "../NavBar";
 import { Logo } from "../Logo";
 import "./style.css";
+import _ from "lodash";
 
 class SearchForm extends Component {
 
@@ -44,11 +45,10 @@ class SearchForm extends Component {
 
   handleSaveArtist = (event) => {
     event.preventDefault();
-    Axios.post("/saved", {
-      favorites: {
-        artworks: this.state
-      }
-    })
+    debugger;
+
+    let selectedArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id});
+    Axios.post("/saved", selectedArtwork);
   }
   
   render() {
@@ -87,12 +87,13 @@ class SearchForm extends Component {
                     image={card.ThumbnailURL}>
                     <ImageCard 
                     thumbnail={card.ThumbnailURL} 
+                    cardId={card._id}
                     title={card.Title} 
                     date={card.Date} 
                     medium={card.Medium}
                     name={card.Artist} 
                     nationality={card.Nationality}
-                    handleSaveArtist={card.handleSaveArtist} 
+                    handleSaveArtist={this.handleSaveArtist} 
                     /> 
                   </ListItem>
                 ))}
