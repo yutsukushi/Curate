@@ -106,7 +106,7 @@ class SearchForm extends Component {
                     medium={card.Medium}
                     name={card.Artist} 
                     nationality={card.Nationality}
-                    handleSaveArtist={card.handleSaveArtist} 
+                    handleSaveArtist={this.handleSaveArtist} 
                     /> 
                   </ListItem>
                 ))}
