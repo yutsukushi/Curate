@@ -25,7 +25,7 @@ module.exports = {
 
   findAndSaveArt: function (req, res) {
     console.log('findAll req.query: ', req.query);
-    var userLogin = req.query.username;
+    var userLogin = res.cookie('username', userRecord.username)
 
     db.User
       .findOneAndUpdate({ username: userLogin }, { favorites: { artworks: req.body } }, { new: true })
