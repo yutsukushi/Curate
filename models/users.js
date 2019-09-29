@@ -22,16 +22,16 @@ var UserSchema = new Schema({
     ]
   }, 
 
-  favorite_artworks: {
+  favorite_artworks: [{
       _id: String,
-      Artist: String,
+      Artist: [String],
       Title: String,
-      Nationality: String,
+      Nationality: [String],
       Medium: String,
       Date: String,
       ThumbnailURL: String,
       URL: String 
-  }
+  }]
 });
 
 var User = mongoose.model("User", UserSchema);
