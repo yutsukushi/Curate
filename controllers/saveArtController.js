@@ -33,7 +33,8 @@ module.exports = {
     db.User
       .findOneAndUpdate(
         { username: userLogin }, 
-        req.body)
+        { $push: { favorite_artworks: req.body }}
+        )
       .then(userArts => res.json(userArts))
       .catch(err => res.status(422).json(err));
   },
