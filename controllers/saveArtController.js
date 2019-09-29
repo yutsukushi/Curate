@@ -13,7 +13,9 @@ module.exports = {
       .then(userRecord => {
         console.log(userRecord);
         if (userRecord !== null && userRecord.password === passWord) {
-          return res.json(userRecord);
+          res.cookie('username', userRecord.username)
+          res.json(userRecord);
+          return res;
         }
         else {
           return res.status(401).json({"error": "Username or Password is incorrect."})
@@ -23,11 +25,11 @@ module.exports = {
 
   findAndSaveArt: function (req, res) {
     console.log('findAll req.query: ', req.query);
-    var userLogin = req.query.name;
+    var userLogin = req.query.username;
 
     db.User
       .findOneAndUpdate({ username: userLogin }, { favorites: { artworks: req.body } }, { new: true })
-      .then(dbUser => res.json(dbUser))
+      .then(userArts => res.json(userArts))
       .catch(err => res.status(422).json(err));
   },
 }
