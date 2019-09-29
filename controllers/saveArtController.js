@@ -25,10 +25,12 @@ module.exports = {
 
   findAndSaveArt: function (req, res) {
     console.log('findAll req.query: ', req.query);
-    var userLogin = res.cookie('username', userRecord.username)
+    console.log('Cookies: ', req.cookies);
+    var userLogin = req.cookies('username');
+    
 
     db.User
-      .findOneAndUpdate({ username: userLogin }, { favorites: { artworks: req.body } }, { new: true })
+      .findOneAndUpdate({ username: userLogin }, { favorite_artworks: req.body }, { new: true })
       .then(userArts => res.json(userArts))
       .catch(err => res.status(422).json(err));
   },
