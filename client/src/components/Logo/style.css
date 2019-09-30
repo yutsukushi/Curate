@@ -1,0 +1,17 @@
+.logoContainer {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    align-items: center;
+    max-width: 33%;
+    min-width: 10%;
+    padding: 1rem;
+}
+.nav {
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: column wrap;
+    max-width: 33%;
+    order: 1;
+    margin: 0px;
+}

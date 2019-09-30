@@ -1,14 +1,8 @@
-.searchContainer {
-    max-width: 100%;
-}
-.display-4 {
+.nav-link-container{
     display: flex;
-    flex: 0 1 auto;
-    font-size: 1.5rem;
-    background: -webkit-linear-gradient(#2D2D2D, #FFD464);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0rem;
+    flex-flow: row nowrap;
+    justify-content: center;
+    order: 3;
 }
 .logo-container {
     display: flex;
@@ -42,9 +36,6 @@
     margin: initial;
     max-width: 100%;
     justify-content: center;
-}
-.nav-link-container{
-    display: flex;
 }
 .form-control {
     display: flex;
