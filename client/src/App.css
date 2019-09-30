@@ -37,7 +37,9 @@
 }
 body {
   background: #F4F4F4;
-  margin: 1rem;
   height: 100%;
   width: 100%;
+}
+@media (max-width: 768px) {
+  
 }
