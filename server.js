@@ -6,7 +6,8 @@ var router = require("./router")
 // var path = require("path");
 // var logger = require("morgan");
 // var mongojs = require("mongojs")
-// var bodyparser = require("body-parser")
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser')
 // var fileupload = require("express-fileupload")
 mongoose.set('useCreateIndex', true);
 var cors = require('cors');
@@ -15,7 +16,13 @@ var PORT = process.env.PORT || 3001;
 
 //Initialize Express
 var app = express();
-app.use(cors())
+app.use(cookieParser())
+
+app.use(cors());
+
+app.use(bodyParser.urlencoded({ extended: true, limit: '50mb', parameterLimit: 100000 }));
+app.use(bodyParser.json({ limit: '50mb', parameterLimit: 100000 }));
+
 // Add routes, both API and view
 app.use(router);
 
@@ -35,17 +42,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googenheimapp"
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
 
-// var bodyParser = require('body-parser');
-
-// app.use(bodyParser.urlencoded({
-//   extended: true,
-//   limit: '50mb',
-//   parameterLimit: 100000
-// }))
-// app.use(bodyParser.json({
-//   limit: '50mb',
-//   parameterLimit: 100000
-// }))
 
 
 // var databaseUrl = "googenheimapp";

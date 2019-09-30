@@ -1,5 +1,5 @@
 import React,{ Component } from "react";
-import { BrowserRouter, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 class CreateAcc extends Component {
@@ -50,29 +50,27 @@ class CreateAcc extends Component {
     }
 
     return (
-      <BrowserRouter>
         <form action="/createaccount/" method="POST">
-          <span>Username: {this.state.username}</span>
+          <span>Username:</span>
           <input
             type="text"
             placeholder="Username"
             name="username"
             value={this.state.username}
-            onChange={this.state.handleInputChange}
+            onChange={this.handleInputChange}
           />
-          <span>Password: {this.state.password}</span>
+          <span>Password:</span>
           <input
             type="password"
             placeholder="Password"
             name="password"
             value={this.state.password}
-            onChange={this.state.handleInputChange}
+            onChange={this.handleInputChange}
           />
           <button onClick={this.handleFormSubmit}>
               Create Account
           </button>
         </form>
-      </BrowserRouter>
     );
   }
     

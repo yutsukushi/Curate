@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import Axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { List, ListItem } from "../List";
+import ImageCard from "../ImageCard";
+import { NavBar } from "../NavBar";
+import { Logo } from "../Logo";
 import "./style.css";
-
-// import imageCard from "../imageCard/index";
-
+import _ from "lodash";
 
 class SearchForm extends Component {
 
@@ -41,17 +42,20 @@ class SearchForm extends Component {
     this.setState({serverResponse: res.data});
     })
   }
+
+  handleSaveArtist = (event) => {
+    event.preventDefault();
+    debugger;
+
+    let selectedArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id});
+    Axios.post("/saved", selectedArtwork);
+  }
   
   render() {
     return (
       <div>
         <div className="header">
-          <ul className="nav">
-            <li className=" nav-item logo-container">
-              <h1 className="display-4" to="/">Goog Enheim
-                <Link to="/"></Link>
-              </h1>
-            </li>
+            <Logo />
             <li className="container">
               <div className="searchContainer">
                 <form className="form-group" action="/" method="GET">
@@ -63,23 +67,14 @@ class SearchForm extends Component {
                     onChange={this.handleInputChange} />
                   <button 
                     type="submit" 
-                    className=" btn-search" 
+                    className="btn-search" 
                     onClick={this.handleArtistSubmit}>
                       Search
                   </button>
                 </form>
               </div>
             </li>
-            <li className="nav-item nav-item-link">
-              <Link to="/login" className="nav-link">Login</Link>
-            </li>
-            <li className="nav-item nav-item-link">
-              <Link to="/" className="nav-link">Search</Link>
-            </li>
-            <li className="nav-item nav-item-link">
-              <Link to="/saved" className="nav-link">Saved</Link>
-            </li>
-          </ul>
+            <NavBar />
         </div>
         <div>
           <div>
@@ -90,15 +85,16 @@ class SearchForm extends Component {
                     key={card._id}
                     alt={card.Artist} 
                     image={card.ThumbnailURL}>
-                  <div className="card img-container hover">
-                  <img src={card.ThumbnailURL} alt="artwork"></img>
-                    <ul>
-                      <li className="art_title">{card.Title}</li>
-                      <li className="art_date">{card.Date}</li>
-                      <li className="artist_name">{card.Artist}</li>
-                      <li className="nationality">{card.Nationality}</li>
-                    </ul>
-                  </div>
+                    <ImageCard 
+                    thumbnail={card.ThumbnailURL} 
+                    cardId={card._id}
+                    title={card.Title} 
+                    date={card.Date} 
+                    medium={card.Medium}
+                    name={card.Artist} 
+                    nationality={card.Nationality}
+                    handleSaveArtist={this.handleSaveArtist} 
+                    /> 
                   </ListItem>
                 ))}
             </List>
