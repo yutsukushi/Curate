@@ -1,7 +1,18 @@
+.display-4 {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(#2D2D2D, #FFD464);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0rem;
+}
 .logoContainer {
     display: flex;
     flex: 1 1 auto;
     flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
     max-width: 33%;
     min-width: 10%;
@@ -14,4 +25,55 @@
     max-width: 33%;
     order: 1;
     margin: 0px;
+}
+@media (max-width: 768px) {
+    .display-4 {
+        order: 1;
+        display: flex;
+    }
+    .logoContainer {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .nav {
+        display: flex;
+        flex-flow: row;
+    }
+}
+@media (max-width:640px) {
+    .logoContainer {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .display-4 {
+        order: 1;
+        min-width: 50%;
+        display: flex;
+        flex: 0 1 auto;
+        font-size: 1.5rem;
+        background: -webkit-linear-gradient(#2D2D2D, #FFD464);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0rem;
+    }
+    .logo-container {
+        order: 1;
+        min-width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-flow: row reverse;
+    }
+    .display-4 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 }
