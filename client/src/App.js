@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SignIn from "./components/SignIn"
+import SignIn from "./components/Authentication/Signin"
 import CreateAcc from "./components/Authentication/CreateAcc";
 import SearchForm from "./components/SearchForm";
 import Saved from "./components/SavedArtists/Saved"

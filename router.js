@@ -14,10 +14,17 @@ router
   .put(artistsController.update)
   .delete(artistsController.remove);
 
-// If no API routes are hit, send the React app
-// router.use(function(req, res) {
-//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
-// });
+router
+  .route("/auth/createAccount")
+  .post(usersController.create);
+
+router
+  .route("/saved")
+  .post(saveArtController.findAndSaveArt);
+
+router
+  .route("/api/users/")
+  .get(saveArtController.findUserAndPW);
 
 module.exports = router;
 // If no API routes are hit, send the React app

@@ -34,6 +34,7 @@ module.exports = {
 
     try {
       let userArts = await db.User.findOne({ username: userLogin });
+      console.log("userArts: " + userArts);
       console.log("userArts: " + userArts.favorite_artworks)
       let artID = _.find(userArts.favorite_artworks, {_id: favArtworkId});
       console.log("artID: " + artID)
