@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 export function Logo({children}) {
     return  (
-        <div>
+        <div className="logoContainer">
             <ul className="nav">
-            <li className=" nav-item logo-container">
-                <h1 className="display-4" to="/">Goog Enheim
-                <Link to="/"></Link>
-                </h1>
-            </li>
+                <li className=" nav-item logo-container">
+                    <h1 className="display-4" to="/">Goog Enheim
+                    <Link to="/"></Link>
+                    </h1>
+                </li>
             { children }
             </ul>
         </div>

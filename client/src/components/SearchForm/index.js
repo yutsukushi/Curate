@@ -53,11 +53,11 @@ class SearchForm extends Component {
   
   render() {
     return (
-      <div>
+      <div className="searchForm">
         <div className="header">
             <Logo />
-            <li className="container">
-              <div className="searchContainer">
+            <NavBar />
+            <div className="searchContainer">
                 <form className="form-group" action="/" method="GET">
                   <input 
                     name="name"
@@ -72,9 +72,7 @@ class SearchForm extends Component {
                       Search
                   </button>
                 </form>
-              </div>
-            </li>
-            <NavBar />
+            </div>
         </div>
         <div>
           <div>
