@@ -55,7 +55,35 @@ module.exports = {
       console.log(err)
       return res.status(422).json(err);
     }
+  },
     
+    findAndDeleteArt: async function (req, res) {
+      var userLogin = req.cookies.username;
+      var favArtworkId = req.body._id;
+  
+      try {
+        let userSavedArts = await db.User.findOne({ username: userLogin });
+        console.log("userSavedArts: " + userSavedArts.favorite_artworks)
+        let savedArtID = _.find(userSavedArts.favorite_artworks, {_id: favArtworkId});
+        console.log("savedArtID: " + savedArtID)
+        if (savedArtID !== undefined) {
+          // delete new fav art into user record
+          let userSavedArts2 = await db.User.findOneAndUpdate(
+            { username: userLogin },
+            { $pull: { favorite_artworks: req.body }});
+            console.log("userSavedArts2: " + userSavedArts2)
+            return res.json(userSavedArts2);
+        }
+        else {
+          // this artwork is already favorited by this user
+          return res.status(420).json({"error": "This has already been deleted"});
+        }
+        
+      }
+      catch (err) {
+        console.log(err)
+        return res.status(422).json(err);
+      }
 
 
 
