@@ -13,9 +13,27 @@ class Saved extends Component {
     constructor (props) {
         super(props)
         this.state = {
-          serverResponse: []
+          savedArt: []
         }
         this.handleDeleteArtist.bind(this);
+        this.handleSavedArtist.bind(this);
+    }
+
+    // TODO:
+    // when saved tab is clicked,
+    // get the saved artworks and load page
+    // render saved art cards with delete button
+    // delete button should appear for each card, and delete functionality
+    
+    handleSavedArtist = () => {
+        Axios.get("/saved", {
+            params: {
+                savedArt: this.state.savedArt
+            }
+        })
+        .then(res => {
+            console.log("saved artists: ", res)
+        })
     }
 
     handleDeleteArtist = (event) => {
@@ -30,12 +48,12 @@ class Saved extends Component {
         return (
             <div className="header">
                 <Logo />
-                <NavBar />
+                <NavBar handleSavedArtist={this.handleSavedArtist}/>
                 <h4>Saved</h4>
                 <div className="savedArt">
-                    {this.state.serverResponse.length ? (
+                    {this.state.savedArt.length ? (
                         <List>
-                        {this.state.serverResponse.map(art => (
+                        {this.state.savedArt.map(art => (
                             <ListItem key={art._id}>
                                 <ImageCard 
                                 thumbnail={art.ThumbnailURL} 
