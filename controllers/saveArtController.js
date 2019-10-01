@@ -76,7 +76,7 @@ module.exports = {
         }
         else {
           // this artwork is already favorited by this user
-          return res.status(420).json({"error": "This has already been deleted"});
+          return res.status(420).json({"error": "It is not possible to delete that which does not exist"});
         }
         
       }
