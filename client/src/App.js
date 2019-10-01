@@ -12,9 +12,9 @@ function App() {
     <Router>
     <span className="">
       <Switch>
-        <Route exact path="/login" component={ SignIn }/>
+        <Route exact path="/" component={ SignIn }/>
         <Route exact path="/createaccount/" component={ CreateAcc }/>
-        <Route exact path="/" component={ SearchForm } />
+        <Route exact path="/search" component={ SearchForm } />
         <Route exact path="/saved" component= { Saved } />
       </Switch>
     </span>

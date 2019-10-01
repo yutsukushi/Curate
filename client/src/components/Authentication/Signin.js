@@ -23,7 +23,7 @@ class SignIn extends Component {
     })
       .then(res => {
         console.log(`User has logged in as ${res.username}`)
-        this.props.history.push("/");
+        this.props.history.push("/search");
       }).catch(err => {
         console.log(err);
       })
@@ -41,7 +41,7 @@ class SignIn extends Component {
   render(props) {
     return (
       <div className="loginPage">
-        <div className="containerLogin">
+        <section className="containerLogin">
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
@@ -70,18 +70,19 @@ class SignIn extends Component {
                 onClick={this.handleLogInSubmit}>
                 Sign In
               </button>
-
-              <div>
+              <span>
                 <Link to="/createaccount/">
                   Create Account
                 </Link>
-              </div>
+              </span>
             </form>
           </div>
-        </div>
-        <div>
-          adsfaf
-        </div>
+        </section>
+        <section className="containerLogo">
+          <div className="logoContainer">
+            <div className="display-4">Goog Enheim</div>
+          </div>
+        </section>
       </div>
     );
   }
