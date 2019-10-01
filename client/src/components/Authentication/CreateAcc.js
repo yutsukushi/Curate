@@ -37,7 +37,7 @@ class CreateAcc extends Component {
         }).then(response => {
           console.log(response);
           this.setState({
-            redirectTo: '/login'
+            redirectTo: '/'
           })
           
         })

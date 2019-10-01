@@ -58,7 +58,7 @@ class SearchForm extends Component {
             <Logo />
             <NavBar />
             <div className="searchContainer">
-                <form className="form-group" action="/" method="GET">
+                <form className="form-group" action="/search" method="GET">
                   <input 
                     name="name"
                     type="text" 
