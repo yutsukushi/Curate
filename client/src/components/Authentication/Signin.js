@@ -23,7 +23,7 @@ class SignIn extends Component {
     })
       .then(res => {
         console.log(`User has logged in as ${res.username}`)
-        this.props.history.push("/");
+        this.props.history.push("/search");
       }).catch(err => {
         console.log(err);
       })
@@ -42,7 +42,7 @@ class SignIn extends Component {
     return (
       <div className="containerLogin">
         <div className="loginForm">
-          <form action="/login" method="GET">
+          <form action="/" method="GET">
             <span>Username: </span>
             <input
               type="text"
