@@ -57,15 +57,5 @@ module.exports = {
       return res.status(422).json(err);
     }
     
-
-
-
-    // db.User
-    //   .findOneAndUpdate(
-    //     { username: userLogin }, 
-    //     { $push: { favorite_artworks: req.body }}
-    //     )
-    //   .then(userArts => res.json(userArts))
-    //   .catch(err => res.status(422).json(err));
   },
 }
