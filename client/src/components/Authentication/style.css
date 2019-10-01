@@ -50,6 +50,7 @@ html,body {
 .logoText {
     display: flex;
     flex: 1 1 auto;
+    padding: 1rem;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -62,12 +63,12 @@ html,body {
     -webkit-text-fill-color: transparent;
     margin: 0rem;
 }
-.logoContainer {
+.LogoContainer {
     display: flex;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     width: 50rem;
-    padding: 0rem;
+    padding: 1rem;
 }
