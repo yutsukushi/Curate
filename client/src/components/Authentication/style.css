@@ -1,5 +1,16 @@
 html,body { height:100%; }
 
+.loginPage {
+    display: flex;
+    width: 100%;
+}
+.containerLogo {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+}
 .containerLogin {
     display: flex;
     flex-flow: column wrap;
@@ -13,6 +24,9 @@ html,body { height:100%; }
     justify-content: center;
     flex-direction: column;
     height: 500px;
+}
+.containerField {
+    padding: .5rem 0;
 }
 .containerLogo {
     display: flex;

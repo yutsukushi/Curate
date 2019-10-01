@@ -40,37 +40,47 @@ class SignIn extends Component {
 
   render(props) {
     return (
-      <div className="containerLogin">
-        <div className="loginForm">
-          <form action="/login" method="GET">
-            <span>Username: </span>
-            <input
-              type="text"
-              placeholder="Username"
-              name="username"
-              value={this.state.username}
-              onChange={this.handleInputChange}
-            />
-            <span>Password: </span>
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleInputChange}
-            />
-            <button
-              onClick={this.handleLogInSubmit}>
-              Sign In
-          </button>
+      <div className="loginPage">
+        <div className="containerLogin">
+          <div className="loginForm">
+            <form action="/login" method="GET">
+              <div className="containerField">
+                <span>Username: </span>
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="containerField">
+                <span>Password: </span>
+                <input
+                  className="form-control"
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <button
+                onClick={this.handleLogInSubmit}>
+                Sign In
+              </button>
 
-            <div>
-              <Link to="/createaccount/">
-                Create Account
-          </Link>
-              <pre>{JSON.stringify(this.state)}</pre>
-            </div>
-          </form>
+              <div>
+                <Link to="/createaccount/">
+                  Create Account
+                </Link>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div>
+          adsfaf
         </div>
       </div>
     );
