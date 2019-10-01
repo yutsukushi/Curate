@@ -6,21 +6,19 @@ const saveArtController = require("./controllers/saveArtController");
 
 router.route("/api/artists")
   .get(artistsController.findAll)
-  .post(artistsController.create);
 
 router
   .route("/api/artists/:artists")
   .get(artistsController.findById)
-  .put(artistsController.update)
-  .delete(artistsController.remove);
-
+ 
 router
   .route("/auth/createAccount")
   .post(usersController.create);
 
 router
   .route("/saved")
-  .post(saveArtController.findAndSaveArt);
+  .post(saveArtController.findAndSaveArt)
+  .delete(saveArtController.findAndDeleteArt);
 
 router
   .route("/api/users/")
