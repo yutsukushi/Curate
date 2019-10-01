@@ -4,12 +4,27 @@ import { NavBar } from "../NavBar";
 import { Logo } from "../Logo";
 import { List, ListItem } from "../List";
 import DeleteBtn from "../Buttons/DeleteBtn";
+import ImageCard from "../ImageCard";
+import Axios from "axios";
+import _ from "lodash";
 
 class Saved extends Component {
 
-    state = {
-        savedArt: []
-    };
+    constructor (props) {
+        super(props)
+        this.state = {
+          serverResponse: []
+        }
+        this.handleDeleteArtist.bind(this);
+    }
+
+    handleDeleteArtist = (event) => {
+        event.preventDefault();
+
+        let removeArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id});
+        console.log("remove artwork" + removeArtwork)
+        Axios.delete("/saved", removeArtwork);
+    }
 
     render() {
         return (
@@ -18,15 +33,20 @@ class Saved extends Component {
                 <NavBar />
                 <h4>Saved</h4>
                 <div className="savedArt">
-                    {this.state.savedArt.length ? (
+                    {this.state.serverResponse.length ? (
                         <List>
-                        {this.state.savedArt.map(art => (
+                        {this.state.serverResponse.map(art => (
                             <ListItem key={art._id}>
-                                <a href={"/art/" + art._id}>
-                                <strong>
-                                    {art.title} by {art.artist}
-                                </strong>
-                                </a>
+                                <ImageCard 
+                                thumbnail={art.ThumbnailURL} 
+                                artId={art._id}
+                                title={art.Title} 
+                                date={art.Date} 
+                                medium={art.Medium}
+                                name={art.Artist} 
+                                nationality={art.Nationality}
+                                handleDeleteArtist={this.handleDeleteArtist} 
+                                /> 
                                 <DeleteBtn />
                             </ListItem>
                         ))}
