@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css"
 
-export function NavBar() {
+export function NavBar(props) {
     return (
         <div className="nav-link-container">
             <li className="nav-item nav-item-link">
@@ -12,8 +12,12 @@ export function NavBar() {
                 <Link to="/search" className="nav-link">Search</Link>
             </li>
             <li className="nav-item nav-item-link">
+<<<<<<< HEAD
                 <Link to="/saved" className="nav-link">Saved</Link>
 >>>>>>> 7ca5b6bd52967b90daa364750c8f6df9eb24999d
+=======
+                <Link to="/saved" className="nav-link" handleSavedArtist={props.handleSavedArtist}>My Profile</Link>
+>>>>>>> 86754272ccec930f13223862a9225596dace9c24
             </li>
             <li className="nav-item nav-item-link">
                 <Link to="/" className="nav-link">Log out</Link>

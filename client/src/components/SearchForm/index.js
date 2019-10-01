@@ -45,7 +45,6 @@ class SearchForm extends Component {
 
   handleSaveArtist = (event) => {
     event.preventDefault();
-    debugger;
 
     let selectedArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id});
     Axios.post("/saved", selectedArtwork);
