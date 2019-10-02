@@ -74,7 +74,7 @@ class SearchForm extends Component {
             </div>
         </div>
         <div>
-          <div>
+          <div className="form-group-2">
             {this.state.serverResponse.length ? (
               <List>
                 {this.state.serverResponse.map(card => (
@@ -91,13 +91,13 @@ class SearchForm extends Component {
                     name={card.Artist} 
                     nationality={card.Nationality}
                     Button={() => (
-                      <div>
+                      <div className="form-group-2">
                         <button
+                          className="btn-fav"
                           onClick={() => this.handleSaveArtist(card.id)}
                         >
-                          +
+                          Save
                         </button>
-                        <button>View Profile</button>
                       </div>
                     )} 
                     /> 
@@ -105,11 +105,11 @@ class SearchForm extends Component {
                 ))}
             </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <p className="intro-text">Welcome! Type the name of an artist to learn more about their work.</p>
             )}
           </div>
-          {/* TESTING PURPOSEs */}
-          <pre>{JSON.stringify(this.state, null, 2)}</pre>
+          {/* { TESTING PURPOSEs }
+          <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
         </div>
       </div>
     );

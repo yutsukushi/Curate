@@ -10,6 +10,24 @@
     border: none;
 }
 .list-group {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding-left: .8rem;
+}
+@media (max-width: 1036px) {
+    .list-group-item {
+        flex: 0 1 auto;
+    }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width:639px) {
+
+}
+@media (max-width:465px) {
+
 }
