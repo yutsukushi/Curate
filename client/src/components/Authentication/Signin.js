@@ -42,10 +42,12 @@ class SignIn extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
+          <div className="responsiveLogo">Goog Enheim</div>
+          <div className="responsiveSubtext">Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
-                <span>Username: </span>
+                <span class="username">Username: </span>
                 <input
                   className="form-control"
                   type="text"
@@ -56,7 +58,7 @@ class SignIn extends Component {
                 />
               </div>
               <div className="containerField">
-                <span>Password: </span>
+                <span class="password">Password: </span>
                 <input
                   className="form-control"
                   type="password"
@@ -66,15 +68,17 @@ class SignIn extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-              <button
-                onClick={this.handleLogInSubmit}>
-                Sign In
-              </button>
-              <span>
-                <Link to="/createaccount/">
-                  Create Account
-                </Link>
-              </span>
+              <div className="buttonContainer">
+                <button
+                  onClick={this.handleLogInSubmit}>
+                  Sign In
+                </button>
+                <button>
+                  <Link to="/createaccount/">
+                    Create Account
+                  </Link>
+                </button>
+              </div>
             </form>
           </div>
         </section>
@@ -82,7 +86,7 @@ class SignIn extends Component {
           <div className="LogoContainer">
             <div className="logoText">Goog Enheim</div>
           </div>
-          <div className="display-4">
+          <div class="logoSubtext">
           Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
           </div>
         </section>
