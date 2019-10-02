@@ -31,6 +31,8 @@
   .card-list{
     display: flex;
     flex-flow: column nowrap;
+    flex: 0 1 auto;
+    width: 100%;
     margin: .5rem;
     position: inherit;
     color: white;
