@@ -40,6 +40,8 @@ class CreateAcc extends Component {
             redirectTo: '/'
           })
           
+        }).catch(err =>  {
+          console.log(err)
         })
 
   }

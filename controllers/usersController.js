@@ -14,8 +14,16 @@ module.exports = {
       create: function(req, res) {
         db.User
           .create(req.body)
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err));
+          .then(dbModel => {
+            console.log(dbModel)
+            res.json(dbModel)}) 
+          .catch(err =>  {
+            console.log(err)
+            const result = {
+              err,
+              message: err.errmsg
+            }
+            res.status(422).json({result})});
       },
 
 }
