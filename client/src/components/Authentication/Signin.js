@@ -47,7 +47,7 @@ class SignIn extends Component {
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
-                <span class="username">Username: </span>
+                <span className="username">Username: </span>
                 <input
                   className="form-control"
                   type="text"
@@ -58,7 +58,7 @@ class SignIn extends Component {
                 />
               </div>
               <div className="containerField">
-                <span class="password">Password: </span>
+                <span className="password">Password: </span>
                 <input
                   className="form-control"
                   type="password"
@@ -73,11 +73,9 @@ class SignIn extends Component {
                   onClick={this.handleLogInSubmit}>
                   Sign In
                 </button>
-                <button>
                   <Link to="/createaccount/">
                     Create Account
                   </Link>
-                </button>
               </div>
             </form>
           </div>

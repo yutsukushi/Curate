@@ -18,7 +18,7 @@
     flex-flow: row;
     justify-content: space-around;
 }
-@media (max-width: 811px) {
+@media (max-width: 957px) {
     .nav-link-container{
         display: flex;
         flex: 1 1 auto;
