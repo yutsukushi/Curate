@@ -17,7 +17,6 @@ function ImageCard ({thumbnail, title, name, medium, date, nationality, Button }
           <li className="nationality">{nationality}</li>
         </ul>
         <Button />
-        <button className="profileButton">View Profile</button>
       </div>
     </div>
   );
