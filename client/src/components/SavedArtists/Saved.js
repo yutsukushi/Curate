@@ -16,6 +16,11 @@ class Saved extends Component {
             savedArt: ""
         }
     }
+
+    componentDidMount() {
+        this.handlePopulateArtist();
+    };
+    
     handlePopulateArtist = () => {
         Axios.get("/saved", {
             params: {
@@ -27,9 +32,7 @@ class Saved extends Component {
                 this.setState({ savedArt: res.data.favorite_artworks });
             })
     }
-    componentDidMount() {
-        this.handlePopulateArtist();
-    };
+    
     // this.handlePopulateArtist.bind(this);
 
     // TODO:
