@@ -3,7 +3,7 @@ import { NavBar } from "../NavBar";
 // import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { List, ListItem } from "../List";
-import DeleteBtn from "../Buttons/DeleteBtn";
+import DeleteBtn from "../Buttons/DeleteBtn"
 import ImageCard from "../ImageCard";
 import Axios from "axios";
 import _ from "lodash";
@@ -16,6 +16,11 @@ class Saved extends Component {
             savedArt: ""
         }
     }
+
+    componentDidMount() {
+        this.handlePopulateArtist();
+    };
+
     handlePopulateArtist = () => {
         Axios.get("/saved", {
             params: {
@@ -24,18 +29,15 @@ class Saved extends Component {
         })
             .then(res => {
                 console.log("saved artists: ", res);
-                this.setState({ savedArt: res.data.favorite_artworks });
+                this.setState({ 
+                    savedArt: res.data.favorite_artworks 
+                });
             })
     }
-    componentDidMount() {
-        this.handlePopulateArtist();
-    };
+    
     // this.handlePopulateArtist.bind(this);
 
     // TODO:
-    // when saved tab is clicked,
-    // get the saved artworks and load page
-    // render saved art cards with delete button
     // delete button should appear for each card, and delete functionality
     // this.handleDeleteArtist.bind(this);
 
@@ -75,10 +77,14 @@ class Saved extends Component {
                                                 date={art.Date}
                                                 medium={art.Medium}
                                                 name={art.Artist}
-                                                nationality={art.Nationality}
-                                                handleDeleteArtist={this.handleDeleteArtist}
+                                                nationality={art.Nationality}Button={() => (
+                                                    <button
+                                                      onClick={() => this.handleDeleteArtist(art._id)}
+                                                    >
+                                                      x
+                                                    </button>
+                                                )}
                                             />
-                                            <DeleteBtn />
                                         </ListItem>
                                     );
                                 })}

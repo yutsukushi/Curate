@@ -10,7 +10,7 @@ export function NavBar(props) {
                 <Link to="/search" className="nav-link">Search</Link>
             </li>
             <li className="nav-item nav-item-link">
-                <Link to="/saved" className="nav-link" handleSavedArtist={props.handleSavedArtist}>My Profile</Link>
+                <Link to="/saved" className="nav-link">My Profile</Link>
             </li>
             <li className="nav-item nav-item-link">
                 <Link to="/" className="nav-link">Log out</Link>
