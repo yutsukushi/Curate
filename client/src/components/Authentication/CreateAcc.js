@@ -52,27 +52,53 @@ class CreateAcc extends Component {
     }
 
     return (
-        <form action="/createaccount/" method="POST">
-          <span>Username:</span>
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
-          />
-          <span>Password:</span>
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-          />
-          <button onClick={this.handleFormSubmit}>
-              Create Account
-          </button>
-        </form>
+      <div className="loginPage">
+        <section className="containerLogin">
+          <div className="responsiveLogo">Goo ġ Enheim
+            <div className="createAccount">Create Account</div>
+          </div>
+          <div className="responsiveSubtext">Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
+          <div className="loginForm">
+            <form action="/createaccount/" method="POST">
+              <div className="containerField">
+                <span className="username">Username:</span>
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="containerField">
+                <span className="password">Password:</span>
+                <input
+                  className="form-control"
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="containerField">
+                <button onClick={this.handleFormSubmit}>
+                  Create Account
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section className="containerLogo">
+          <div className="LogoContainer">
+            <div className="logoText">Goo ġ Enheim</div>
+          </div>
+          <div class="logoSubtext">
+            Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
+          </div>
+        </section>
+      </div>
     );
   }
     

@@ -42,12 +42,12 @@ class SignIn extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
-          <div className="responsiveLogo">Goog Enheim</div>
-          <div className="responsiveSubtext">Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
+          <div className="responsiveLogo">Goo ġ Enheim</div>
+          <div className="responsiveSubtext">Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
-                <span class="username">Username: </span>
+                <span className="username">Username: </span>
                 <input
                   className="form-control"
                   type="text"
@@ -58,7 +58,7 @@ class SignIn extends Component {
                 />
               </div>
               <div className="containerField">
-                <span class="password">Password: </span>
+                <span className="password">Password: </span>
                 <input
                   className="form-control"
                   type="password"
@@ -73,21 +73,19 @@ class SignIn extends Component {
                   onClick={this.handleLogInSubmit}>
                   Sign In
                 </button>
-                <button>
                   <Link to="/createaccount/">
                     Create Account
                   </Link>
-                </button>
               </div>
             </form>
           </div>
         </section>
         <section className="containerLogo">
           <div className="LogoContainer">
-            <div className="logoText">Goog Enheim</div>
+            <div className="logoText">Goo ġ Enheim</div>
           </div>
           <div class="logoSubtext">
-          Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
+            Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
           </div>
         </section>
       </div>

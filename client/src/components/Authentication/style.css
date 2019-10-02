@@ -28,6 +28,21 @@ html,body {
     justify-content: center;
     flex-direction: column;
 }
+.createAccount{
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    align-content: flex-end;
+    text-align: center;
+    font-size: 1.3rem;
+    background: -webkit-linear-gradient(#2D2D2D, #FFD464);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0rem;
+    padding: 1rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
 .containerField {
     padding: .5rem 0;
     width: auto;
@@ -35,6 +50,16 @@ html,body {
 .buttonContainer {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0rem;
+}
+button {
+    background: #D6C9B8;
+    width: 150px;
+    height: 30px;
+    color: #1f1f1f;
+    border-radius: 4px;
+    stroke: #D6C9B8;
+    text-align: center;
 }
 
 /*------------- Intro Style (Right Side) -------------*/
@@ -93,9 +118,18 @@ html,body {
     width:100%;
     padding: 1.2rem;
 }
+@media (max-width: 900px) {
+    .logoText {
+        font-size: 3rem;
+    }
+    .logoSubtext {
+        font-size: 1rem;
+    }
+}
 @media (max-width: 700px) {
     .responsiveLogo {
         display: flex;
+        flex-flow: column nowrap;
         flex: 1 1 auto;
         padding: 1.2rem;
         justify-content: center;
@@ -156,6 +190,10 @@ html,body {
         padding: 1rem 0rem;
         font-weight: 300;
         line-height: 1.2;
+    }
+    .createAccount{
+        flex: 1 1 auto;
+        justify-content: center;
     }
 }
 

@@ -1,0 +1,15 @@
+.list-group-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    padding: .5rem .5rem;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: none;
+}
+.list-group {
+    justify-content: center;
+    align-items: center;
+}
