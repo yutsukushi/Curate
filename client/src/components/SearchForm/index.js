@@ -90,7 +90,16 @@ class SearchForm extends Component {
                     medium={card.Medium}
                     name={card.Artist} 
                     nationality={card.Nationality}
-                    handleSaveArtist={this.handleSaveArtist} 
+                    Button={() => (
+                      <div>
+                        <button
+                          onClick={() => this.handleSaveArtist(card.id)}
+                        >
+                          +
+                        </button>
+                        <button>View Profile</button>
+                      </div>
+                    )} 
                     /> 
                   </ListItem>
                 ))}
