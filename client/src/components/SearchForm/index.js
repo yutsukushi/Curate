@@ -93,8 +93,8 @@ class SearchForm extends Component {
                     Button={() => (
                       <div className="form-group-2">
                         <button
-                          className="btn-fav"
-                          onClick={() => this.handleSaveArtist(card.id)}
+                          data-id={card._id}
+                          onClick={(event) => this.handleSaveArtist(event)}
                         >
                           Save
                         </button>
@@ -108,8 +108,6 @@ class SearchForm extends Component {
               <p className="intro-text">Welcome! Type the name of an artist to learn more about their work.</p>
             )}
           </div>
-          {/* { TESTING PURPOSEs }
-          <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
         </div>
       </div>
     );
