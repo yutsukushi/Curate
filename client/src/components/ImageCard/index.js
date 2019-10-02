@@ -6,17 +6,19 @@ import "./Card.css";
 //stateless component
 function ImageCard ({thumbnail, title, name, medium, date, nationality, Button }) {
   return (
-    <div className="card img-container hover">
-    <img src={thumbnail} alt="artwork"></img>
+    <div className="card">
+      <img src={thumbnail} alt="artwork" className="card-img"></img>
+      <div className="card-list">
         <ul>
           <li className="art_title">{title}</li>
-          <li className="artist_name">{name}</li>
           <li className="medium">{medium}</li>
+          <li className="artist_name">{name}</li>
           <li className="art_date">{date}</li>
           <li className="nationality">{nationality}</li>
-          {/* <SaveBtn /> */}
-          <Button />
         </ul>
+        <Button />
+        <button className="profileButton">View Profile</button>
+      </div>
     </div>
   );
 }
