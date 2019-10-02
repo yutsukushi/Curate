@@ -3,7 +3,7 @@ import { NavBar } from "../NavBar";
 // import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { List, ListItem } from "../List";
-import DeleteBtn from "../Buttons/DeleteBtn"
+// import DeleteBtn from "../Buttons/DeleteBtn"
 import ImageCard from "../ImageCard";
 import Axios from "axios";
 import _ from "lodash";
@@ -42,7 +42,7 @@ class Saved extends Component {
     // this.handleDeleteArtist.bind(this);
 
     handleDeleteArtist = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
 
         let removeArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id });
         console.log("remove artwork" + removeArtwork)
