@@ -20,7 +20,7 @@ class Saved extends Component {
     componentDidMount() {
         this.handlePopulateArtist();
     };
-    
+
     handlePopulateArtist = () => {
         Axios.get("/saved", {
             params: {
@@ -29,16 +29,15 @@ class Saved extends Component {
         })
             .then(res => {
                 console.log("saved artists: ", res);
-                this.setState({ savedArt: res.data.favorite_artworks });
+                this.setState({ 
+                    savedArt: res.data.favorite_artworks 
+                });
             })
     }
     
     // this.handlePopulateArtist.bind(this);
 
     // TODO:
-    // when saved tab is clicked,
-    // get the saved artworks and load page
-    // render saved art cards with delete button
     // delete button should appear for each card, and delete functionality
     // this.handleDeleteArtist.bind(this);
 
@@ -78,10 +77,14 @@ class Saved extends Component {
                                                 date={art.Date}
                                                 medium={art.Medium}
                                                 name={art.Artist}
-                                                nationality={art.Nationality}
-                                                handleDeleteArtist={this.handleDeleteArtist}
+                                                nationality={art.Nationality}Button={() => (
+                                                    <button
+                                                      onClick={() => this.handleDeleteArtist(art._id)}
+                                                    >
+                                                      x
+                                                    </button>
+                                                )}
                                             />
-                                            <DeleteBtn />
                                         </ListItem>
                                     );
                                 })}
