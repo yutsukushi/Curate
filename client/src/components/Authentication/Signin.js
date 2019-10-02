@@ -82,10 +82,10 @@ class SignIn extends Component {
         </section>
         <section className="containerLogo">
           <div className="LogoContainer">
-            <div className="logoText">Goog Enheim</div>
+            <div className="logoText">Goo ġ Enheim</div>
           </div>
           <div class="logoSubtext">
-          Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
+            Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
           </div>
         </section>
       </div>
