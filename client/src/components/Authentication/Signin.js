@@ -22,7 +22,7 @@ class SignIn extends Component {
       }
     })
       .then(res => {
-        console.log(`User has logged in as ${res.username}`)
+        console.log(`User has logged in as ${(JSON.stringify(res.username))}`)
         this.props.history.push("/search");
       }).catch(err => {
         console.log(err);
