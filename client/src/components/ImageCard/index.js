@@ -1,5 +1,5 @@
 import React from "react";
-import SaveBtn from "../Buttons/SaveBtn"
+// import SaveBtn from "../Buttons/SaveBtn"
 import "./Card.css";
 
 //this component is only rendering the images to the screen and can be a simple render function it is a
