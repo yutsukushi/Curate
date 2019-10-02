@@ -54,9 +54,10 @@ class CreateAcc extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
-          <div className="createAccount">Create Account</div>
-          <div className="responsiveLogo">Goog Enheim</div>
-          <div className="responsiveSubtext">Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
+          <div className="responsiveLogo">Goo ġ Enheim
+            <div className="createAccount">Create Account</div>
+          </div>
+          <div className="responsiveSubtext">Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
           <div className="loginForm">
             <form action="/createaccount/" method="POST">
               <div className="containerField">
@@ -83,7 +84,7 @@ class CreateAcc extends Component {
               </div>
               <div className="containerField">
                 <button onClick={this.handleFormSubmit}>
-                    Create Account
+                  Create Account
                 </button>
               </div>
             </form>
@@ -94,7 +95,7 @@ class CreateAcc extends Component {
             <div className="logoText">Goog Enheim</div>
           </div>
           <div class="logoSubtext">
-          Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
+            Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
           </div>
         </section>
       </div>

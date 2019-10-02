@@ -42,8 +42,8 @@ class SignIn extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
-          <div className="responsiveLogo">Goog Enheim</div>
-          <div className="responsiveSubtext">Goo g (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
+          <div className="responsiveLogo">Goo ġ Enheim</div>
+          <div className="responsiveSubtext">Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">

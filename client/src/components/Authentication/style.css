@@ -118,9 +118,18 @@ button {
     width:100%;
     padding: 1.2rem;
 }
+@media (max-width: 900px) {
+    .logoText {
+        font-size: 3rem;
+    }
+    .logoSubtext {
+        font-size: 1rem;
+    }
+}
 @media (max-width: 700px) {
     .responsiveLogo {
         display: flex;
+        flex-flow: column nowrap;
         flex: 1 1 auto;
         padding: 1.2rem;
         justify-content: center;
@@ -181,6 +190,10 @@ button {
         padding: 1rem 0rem;
         font-weight: 300;
         line-height: 1.2;
+    }
+    .createAccount{
+        flex: 1 1 auto;
+        justify-content: center;
     }
 }
 
