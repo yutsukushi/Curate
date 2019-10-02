@@ -1,21 +1,45 @@
-.card {
+  .card {
+    display: flex;
+    flex-flow: column wrap;
     background: rgb(241, 241, 241);
     border-radius: .5rem;
-    height: 5rem;
-    margin: 5rem;
     margin-top: 1rem;
+    justify-content: flex-end;
+    align-content: flex-start;
     position: relative;
-    width: 100%;
     box-shadow: 0 3px 6px rgb(119, 119, 119), 0 3px 6px rgb(119, 119, 119);
     overflow: hidden;
-  }
-  
-  /* Slide */
-  .img-container {
     width: 20rem;
     height: 20rem;
   }
+  
+  /* Slide */
   img {
-      width: 20rem;
-      height: 20rem;
+    position: absolute; 
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(231, 231, 231, 0));
+    width: 100%;
+    height: 100%;
+  }
+  .info-container {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  .card-list{
+    margin: 0px;
+  }
+  .art_title {
+    font-size: 1.2rem;
+  }
+  .artist_name {
+  }
+  .medium {
+  }
+  .art_date {
+  }
+  .nationality {
   }
