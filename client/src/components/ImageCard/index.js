@@ -1,9 +1,6 @@
 import React from "react";
-// import SaveBtn from "../Buttons/SaveBtn"
 import "./Card.css";
 
-//this component is only rendering the images to the screen and can be a simple render function it is a
-//stateless component
 function ImageCard ({thumbnail, title, name, medium, date, nationality, Button }) {
   return (
     <div className="card">
@@ -23,5 +20,3 @@ function ImageCard ({thumbnail, title, name, medium, date, nationality, Button }
 }
 
 export default ImageCard;
-
-//fake comments blahhhhhhh
