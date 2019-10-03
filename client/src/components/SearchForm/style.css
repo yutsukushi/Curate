@@ -77,7 +77,8 @@
     display: flex;
     flex: 1 1 auto;
     flex-flow: column wrap;
-    background: #D6C9B8;
+    font-weight: 700px;
+    background: rgb(85, 72, 56);
     align-content: center;
     justify-content: center;
     text-align: center;
@@ -85,12 +86,14 @@
     padding: 1rem;
     width: 150px;
     height: 30px;
-    color: #1f1f1f;
+    color: #ffffff;
     stroke: #D6C9B8;
 }
 .form-group {
     display: flex;
     margin: .5rem;
+    justify-content: center;
+    align-items: center;
 }
 .intro-text {
     display: flex;

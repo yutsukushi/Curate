@@ -8,6 +8,28 @@
   height: 40vmin;
   pointer-events: none;
 }
+.background {
+  background-color: #F4F4F4;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: linear-gradient(-65deg, #F4F4F4, rgb(190, 177, 159), #fff6e5, #ffffff, #F4F4F4);
+  background-size: 400% 400%;
+}
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
 
 .App-header {
   background-color: #282c34;
@@ -24,9 +46,14 @@
   color: #61dafb;
 }
 button {
-  border-radius: 30px;
-  background: #3a2600;
+  border-radius: 4px;
+  
   color: white;
+  margin: 0px;
+  border: 0px;
+  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(41, 36, 29), #806d36, rgb(66, 66, 66));
+  background-size: 300% 100%;
+  animation: gradientBG 15s ease infinite;
 }
 
 @keyframes App-logo-spin {
@@ -36,14 +63,6 @@ button {
   to {
     transform: rotate(360deg);
   }
-}
-.background {
-  background-color: #F4F4F4;
-}
-body {
-  background: #F4F4F4;
-  height: 100%;
-  width: 100%;
 }
 @media (max-width: 768px) {
   

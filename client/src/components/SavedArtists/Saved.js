@@ -3,7 +3,6 @@ import { NavBar } from "../NavBar";
 // import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { List, ListItem } from "../List";
-// import DeleteBtn from "../Buttons/DeleteBtn"
 import ImageCard from "../ImageCard";
 import Axios from "axios";
 import _ from "lodash";
@@ -34,15 +33,9 @@ class Saved extends Component {
                 });
             })
     }
-    
-    // this.handlePopulateArtist.bind(this);
-
-    // TODO:
-    // delete button should appear for each card, and delete functionality
-    // this.handleDeleteArtist.bind(this);
 
     handleDeleteArtist = (event) => {
-        // event.preventDefault();
+        event.preventDefault();
 
         let removeArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id });
         console.log("remove artwork" + removeArtwork)
@@ -57,14 +50,12 @@ class Saved extends Component {
                     <NavBar/>
                     </div>
                     <div className="body">
-                    {/* handlePopulateArtist={this.handlePopulateArtist}  */}
                     
                     <h4>Saved</h4>
                     <div className="form-group-2">
                         {this.state.savedArt.length ? (
                             <List>
                                 {this.state.savedArt.map(art => {
-                                    debugger;
                                     return (
                                         <ListItem 
                                         key={art._id}
@@ -77,14 +68,15 @@ class Saved extends Component {
                                                 date={art.Date}
                                                 medium={art.Medium}
                                                 name={art.Artist}
-                                                nationality={art.Nationality}Button={() => (
-                                                    <div className="form-group-2">
-                                                        <button
-                                                        onClick={() => this.handleDeleteArtist(art._id)}
-                                                        >
-                                                        x
-                                                        </button>
-                                                    </div>
+
+                                                nationality={art.Nationality}
+                                                data-id={art._id}Button={() => (
+                                                    <button
+                                                    data-id={art._id}
+                                                      onClick={(event) => this.handleDeleteArtist(event)}
+                                                    >
+                                                      x
+                                                    </button>
                                                 )}
                                             />
                                         </ListItem>
@@ -93,12 +85,11 @@ class Saved extends Component {
                             </List>
                         ) : ( 
                                 <p className="intro-text">Saved works here.</p>
+
                             )}
                     </div>
 
                 </div>
-                {/* TESTING PURPOSEs */}
-                < pre > {JSON.stringify(this.state, null, 2)}</pre >
             </div>
 
 

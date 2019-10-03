@@ -19,7 +19,7 @@
     align-content: flex-end;
     text-align: center;
     font-size: 1.5rem;
-    background: -webkit-linear-gradient(#2D2D2D, #FFD464);
+    background: -webkit-linear-gradient(#2D2D2D, rgb(122, 92, 15));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0rem;
@@ -72,7 +72,21 @@
     width: 70px;
     height: 30px;
     stroke: #D6C9B8;
+    background: linear-gradient(-65deg, #F4F4F4, rgb(190, 177, 159), #fff6e5, #ffffff, #F4F4F4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
 .btn-search {
     display: flex;
     flex: 1 1 auto;

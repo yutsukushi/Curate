@@ -43,6 +43,7 @@ class SignIn extends Component {
       <div className="loginPage">
         <section className="containerLogin">
           <div className="responsiveLogo">Goo ġ Enheim</div>
+          <div className="formHeader">Login</div>
           <div className="responsiveSubtext">Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
           <div className="loginForm">
             <form action="/login" method="GET">
@@ -84,7 +85,7 @@ class SignIn extends Component {
           <div className="LogoContainer">
             <div className="logoText">Goo ġ Enheim</div>
           </div>
-          <div class="logoSubtext">
+          <div className="logoSubtext">
             Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
           </div>
         </section>
