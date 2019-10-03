@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     padding-left: .8rem;
+    margin: 0rem 4rem;
 }
 @media (max-width: 1036px) {
     .list-group-item {
