@@ -51,7 +51,7 @@ class Saved extends Component {
                     </div>
                     <div className="body">
                     
-                    <h4>Saved</h4>
+                    <h4 className="intro-text">Saved</h4>
                     <div className="form-group-2">
                         {this.state.savedArt.length ? (
                             <List>
@@ -71,12 +71,14 @@ class Saved extends Component {
 
                                                 nationality={art.Nationality}
                                                 data-id={art._id}Button={() => (
-                                                    <button
-                                                    data-id={art._id}
-                                                      onClick={(event) => this.handleDeleteArtist(event)}
-                                                    >
-                                                      x
-                                                    </button>
+                                                    <div className="form-group-2">
+                                                        <button
+                                                        data-id={art._id}
+                                                        onClick={(event) => this.handleDeleteArtist(event)}
+                                                        >
+                                                        Remove
+                                                        </button>
+                                                    </div>
                                                 )}
                                             />
                                         </ListItem>

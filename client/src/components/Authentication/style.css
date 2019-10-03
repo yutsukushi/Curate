@@ -9,6 +9,36 @@ html,body {
 .responsiveLogo {
     display: none;
 }
+.username {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    align-content: flex-start;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    background: -webkit-linear-gradient(#2D2D2D, #FFD464);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0rem;
+    padding: 1rem 0rem;
+    line-height: 1.2;
+}
+.password {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    align-content: flex-start;
+    text-align: left;
+    font-size: 1rem;
+    background: -webkit-linear-gradient(#2D2D2D, #FFD464);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0rem;
+    padding: 1rem 0rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
 .loginPage {
     display: flex;
     width: 100%;
@@ -52,6 +82,7 @@ html,body {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem;
+    align-items: center;
 }
 button {
     background: #D6C9B8;
@@ -89,6 +120,7 @@ button {
         background-position: 0% 50%;
     }
   }
+  
 .logoText {
     display: flex;
     flex: 1 1 auto;
@@ -227,6 +259,7 @@ button {
     .createAccount{
         flex: 1 1 auto;
         justify-content: center;
+        color: white;
     }
 }
 
