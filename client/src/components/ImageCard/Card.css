@@ -32,7 +32,7 @@
     display: flex;
     flex-flow: column nowrap;
     flex: 0 1 auto;
-    width: 100%;
+    width: 93%;
     margin: .5rem;
     position: inherit;
     color: white;
@@ -51,9 +51,11 @@
     display: flex;
     flex: 1 1 auto;
     flex-flow: column nowrap;
+    font-size: .8rem;
   }
   .nationality {
     display: flex;
     flex: 1 1 auto;
     flex-flow: column nowrap;
+    font-size: .8rem;
   }

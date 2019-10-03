@@ -54,8 +54,8 @@ class CreateAcc extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
+          <div className="formHeader">Create your account</div>
           <div className="responsiveLogo">Goo ġ Enheim
-            <div className="createAccount">Create Account</div>
           </div>
           <div className="responsiveSubtext">Goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
           <div className="loginForm">

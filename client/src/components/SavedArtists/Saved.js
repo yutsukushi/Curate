@@ -51,8 +51,8 @@ class Saved extends Component {
                     </div>
                     <div className="body">
                     
-                    <h4>Saved</h4>
-                    <div className="savedArt">
+                    <h4 className="intro-text">Saved</h4>
+                    <div className="form-group-2">
                         {this.state.savedArt.length ? (
                             <List>
                                 {this.state.savedArt.map(art => {
@@ -68,14 +68,17 @@ class Saved extends Component {
                                                 date={art.Date}
                                                 medium={art.Medium}
                                                 name={art.Artist}
+
                                                 nationality={art.Nationality}
                                                 data-id={art._id}Button={() => (
-                                                    <button
-                                                    data-id={art._id}
-                                                      onClick={(event) => this.handleDeleteArtist(event)}
-                                                    >
-                                                      x
-                                                    </button>
+                                                    <div className="form-group-2">
+                                                        <button
+                                                        data-id={art._id}
+                                                        onClick={(event) => this.handleDeleteArtist(event)}
+                                                        >
+                                                        Remove
+                                                        </button>
+                                                    </div>
                                                 )}
                                             />
                                         </ListItem>
@@ -83,7 +86,8 @@ class Saved extends Component {
                                 })}
                             </List>
                         ) : ( 
-                                <h5>No Results to Display</h5>
+                                <p className="intro-text">Saved works here.</p>
+
                             )}
                     </div>
 

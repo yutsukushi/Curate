@@ -18,6 +18,13 @@
     flex-flow: row;
     justify-content: space-around;
 }
+.nav-link {
+    color:rgb(85, 72, 56);
+    font-weight: 530;
+}
+a {
+    color: rgb(85, 72, 56);
+}
 @media (max-width: 957px) {
     .nav-link-container{
         display: flex;
