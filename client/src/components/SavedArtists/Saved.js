@@ -60,7 +60,7 @@ class Saved extends Component {
                     {/* handlePopulateArtist={this.handlePopulateArtist}  */}
                     
                     <h4>Saved</h4>
-                    <div className="savedArt">
+                    <div className="form-group-2">
                         {this.state.savedArt.length ? (
                             <List>
                                 {this.state.savedArt.map(art => {
@@ -78,11 +78,13 @@ class Saved extends Component {
                                                 medium={art.Medium}
                                                 name={art.Artist}
                                                 nationality={art.Nationality}Button={() => (
-                                                    <button
-                                                      onClick={() => this.handleDeleteArtist(art._id)}
-                                                    >
-                                                      x
-                                                    </button>
+                                                    <div className="form-group-2">
+                                                        <button
+                                                        onClick={() => this.handleDeleteArtist(art._id)}
+                                                        >
+                                                        x
+                                                        </button>
+                                                    </div>
                                                 )}
                                             />
                                         </ListItem>
@@ -90,7 +92,7 @@ class Saved extends Component {
                                 })}
                             </List>
                         ) : ( 
-                                <h5>Saved works here.</h5>
+                                <p className="intro-text">Saved works here.</p>
                             )}
                     </div>
 
