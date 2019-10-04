@@ -1,5 +1,6 @@
 import React,{ Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
+
 import axios from "axios";
 
 class CreateAcc extends Component {
@@ -87,6 +88,9 @@ class CreateAcc extends Component {
                   Create Account
                 </button>
               </div>
+              <Link to="/">
+                  Already have an account?
+              </Link>
             </form>
           </div>
         </section>

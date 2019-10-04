@@ -61,11 +61,13 @@ module.exports = {
 
   findAndDeleteArt: async function (req, res) {
     var userLogin = req.cookies.username;
-    var favArtworkId = req.body._id;
+    var favArtworkId = req.params._id;
+
+    console.log("REMOVE ID", favArtworkId)
 
     try {
       let userSavedArts = await db.User.findOne({ username: userLogin });
-      console.log("userSavedArts: " + userSavedArts.favorite_artworks)
+      console.log("userSavedArts: " + userSavedArts)
       let savedArtID = _.find(userSavedArts.favorite_artworks, { _id: favArtworkId });
       console.log("savedArtID: " + savedArtID)
       if (savedArtID !== undefined) {
@@ -73,7 +75,7 @@ module.exports = {
         let userSavedArts2 = await db.User.findOneAndUpdate(
           { username: userLogin },
           { $pull: { favorite_artworks: req.body } });
-        console.log("userSavedArts2: " + userSavedArts2)
+        // console.log("userSavedArts2: " + userSavedArts2)
         return res.json(userSavedArts2);
       }
       else {
