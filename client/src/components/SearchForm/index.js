@@ -106,7 +106,7 @@ class SearchForm extends Component {
                 ))}
             </List>
             ) : (
-              <p className="intro-text">Welcome! Type the name of an artist to learn more about their work.</p>
+              <p className="intro-text">Welcome! Search the name of an artist to learn more about their works.</p>
             )}
           </div>
         </div>
