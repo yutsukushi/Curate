@@ -52,7 +52,7 @@ button {
   color: white;
   margin: 0px;
   border: 0px;
-  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(41, 36, 29),  rgb(66, 66, 66));
+  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(54, 49, 41), rgb(66, 66, 66));
   background-size: 100% 100%;
 }
 @keyframes gradientBG {

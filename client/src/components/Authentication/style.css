@@ -149,7 +149,7 @@ button {
     background: -webkit-linear-gradient(#2D2D2D, #FFD464);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0rem;
+    margin: 0rem 4rem;
     padding: 1rem;
     font-weight: 300;
     line-height: 1.2;
@@ -188,6 +188,11 @@ button {
     .logoSubtext {
         font-size: 1rem;
     }
+    .buttonContainer{
+        justify-content: space-around;
+        height: 7rem;
+        flex-flow: column;
+    }
 }
 @media (max-width: 700px) {
     .responsiveLogo {
@@ -225,8 +230,9 @@ button {
         order: 2;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom right, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#363636, #1f1f1f);
-        background-size: 500%, 500%;
+        background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#363636, #1f1f1f);
+        background-size: 250% 500%;
+        animation: gradientBG 15s ease infinite;
     }
     .username {
         display: flex;
@@ -263,11 +269,21 @@ button {
         justify-content: center;
         color: white;
     }
+    
+    .buttonContainer {
+        display: flex;
+        flex: 0 1 auto;
+        justify-content: space-between;
+        padding: 1rem 0rem;
+        align-items: center;
+        flex-flow: row wrap;
+    }
 }
 
-@media (max-width:360px) { 
+@media (max-width:452px) { 
     .buttonContainer{
         justify-content: space-around;
         height: 7rem;
+        flex-flow: column;
     }
 }
