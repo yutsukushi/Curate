@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavBar } from "../NavBar";
-// import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { List, ListItem } from "../List";
 import ImageCard from "../ImageCard";
@@ -34,12 +33,6 @@ class Saved extends Component {
             })
     }
 
-    // this.handlePopulateArtist.bind(this);
-
-    // TODO:
-    // delete button should appear for each card, and delete functionality
-    // this.handleDeleteArtist.bind(this);
-
     handleDeleteArtist = (event) => {
         event.preventDefault();
         let removeArtwork = _.find(this.state.savedArt, { '_id': event.target.dataset.id });
@@ -50,12 +43,7 @@ class Saved extends Component {
         }
         );
     }
-    // sansArt = id => {
-    //     // Filter this.state.friends for friends with an id not equal to the id being removed
-    //     const art = this.state.savedArt.filter(art2 => art2.id !== id);
-    //     // Set this.state.friends equal to the new friends array
-    //     this.setState({ art });
-    //   };
+
     render() {
         return (
             <div className="box">
@@ -64,7 +52,6 @@ class Saved extends Component {
                     <NavBar />
                 </div>
                 <div className="body">
-                    {/* handlePopulateArtist={this.handlePopulateArtist}  */}
 
                     <h4 className="intro-text">Saved</h4>
                     <div className="savedArt form-group-2">
@@ -103,17 +90,10 @@ class Saved extends Component {
                                 <p className="intro-text">Saved works here.</p>
                             )}
                     </div>
-
                 </div>
-                {/* TESTING PURPOSEs
-                < pre > {JSON.stringify(this.state, null, 2)}</pre > */}
             </div>
-
-
-
         )
     }
-
 }
 
 export default Saved;

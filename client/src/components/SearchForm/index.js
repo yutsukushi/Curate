@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Axios from "axios";
-// import { Link } from "react-router-dom";
 import { List, ListItem } from "../List";
 import ImageCard from "../ImageCard";
 import { NavBar } from "../NavBar";
@@ -114,4 +113,5 @@ class SearchForm extends Component {
     );
   }
 }
+
 export default SearchForm;
