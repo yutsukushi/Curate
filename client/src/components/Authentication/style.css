@@ -104,7 +104,7 @@ button {
     align-content: center;
     justify-content: center;
     /* will be "on top", if browser supports it */
-    background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#363636, #1f1f1f);
+    background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#2e2e2e, #161616);
     background-size: 300% 300%;
     animation: gradientBG 15s ease infinite;
     height: 100%;
@@ -193,7 +193,7 @@ button {
         flex-flow: column wrap;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .responsiveLogo {
         display: flex;
         flex-flow: column nowrap;
@@ -279,7 +279,7 @@ button {
     }
 }
 
-@media (max-width:452px) { 
+@media (max-width:382px) { 
     .buttonContainer{
         justify-content: space-around;
         height: 7rem;
