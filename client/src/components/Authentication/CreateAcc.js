@@ -83,14 +83,14 @@ class CreateAcc extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-              <div className="containerField">
+              <div className="buttonContainer">
                 <button onClick={this.handleFormSubmit}>
                   Create Account
                 </button>
+                <Link to="/">
+                    Already have an account?
+                </Link>
               </div>
-              <Link to="/">
-                  Already have an account?
-              </Link>
             </form>
           </div>
         </section>

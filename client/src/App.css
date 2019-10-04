@@ -45,15 +45,15 @@ body {
 .App-link {
   color: #61dafb;
 }
+
 button {
   border-radius: 4px;
   
   color: white;
   margin: 0px;
   border: 0px;
-  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(41, 36, 29), #806d36, rgb(66, 66, 66));
-  background-size: 300% 100%;
-  animation: gradientBG 15s ease infinite;
+  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(41, 36, 29),  rgb(66, 66, 66));
+  background-size: 100% 100%;
 }
 
 @keyframes App-logo-spin {
@@ -68,4 +68,8 @@ button {
   a {
     color: rgba(255, 255, 255, 0.582);
   }
+}
+a:hover {
+  text-decoration: none;
+  color: #282c34;
 }

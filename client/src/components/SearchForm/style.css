@@ -52,6 +52,10 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background: #ffffff;
+}
+.form-control:focus {
+    background: #ffffff;
 }
 
 .form-group-2 {
@@ -62,14 +66,14 @@
 }
 .btn-fav {
     display: flex;
-    flex: 0 1 auto;
-    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    flex-flow: row;
     align-content: center;
     justify-content: center;
     text-align: center;
-    font-weight: 500;
-    padding: 1rem;
-    width: 70px;
+    font-weight: 400;
+    /* padding: 1rem; */
+    width: 100%;
     height: 30px;
     stroke: #D6C9B8;
 }
@@ -78,7 +82,7 @@
     flex: 1 1 auto;
     flex-flow: column wrap;
     font-weight: 700px;
-    background: rgb(85, 72, 56);
+    background: linear-gradient(-65deg, rgb(68, 50, 27), rgb(33, 46, 34),#363636);
     align-content: center;
     justify-content: center;
     text-align: center;
