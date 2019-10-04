@@ -18,8 +18,12 @@ router
 router
   .route("/saved")
   .post(saveArtController.findAndSaveArt)
-  .delete(saveArtController.findAndDeleteArt)
+  
   .get(saveArtController.findAndPopulate);
+
+  router
+  .route("/saved/:id")
+  .delete(saveArtController.findAndDeleteArt)
 
 router
   .route("/api/users/")
