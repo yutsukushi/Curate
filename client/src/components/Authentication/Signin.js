@@ -3,9 +3,6 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
 import Axios from "axios";
-// import CreateAcc from "./CreateAcc";
-
-
 
 class SignIn extends Component {
   state = {

@@ -1,15 +1,9 @@
 //Dependancies
 var express = require("express");
 var mongoose = require("mongoose");
-var axios = require("axios");
-var router = require("./router")
-// var path = require("path");
-// var logger = require("morgan");
-// var mongojs = require("mongojs")
+var router = require("./router");
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
-// var fileupload = require("express-fileupload")
-mongoose.set('useCreateIndex', true);
 var cors = require('cors');
 
 var PORT = process.env.PORT || 3001;
@@ -25,9 +19,6 @@ app.use(bodyParser.json({ limit: '50mb', parameterLimit: 100000 }));
 
 // Add routes, both API and view
 app.use(router);
-
-// Middleware
-// app.use(logger("dev"));
 
 //Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
