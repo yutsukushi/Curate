@@ -62,8 +62,8 @@ class Saved extends Component {
                 <div className="body">
                     {/* handlePopulateArtist={this.handlePopulateArtist}  */}
 
-                    <h4>Saved</h4>
-                    <div className="savedArt">
+                    <h4 className="intro-text">Saved</h4>
+                    <div className="savedArt form-group-2">
                         {this.state.savedArt.length ? (
                             <List>
                                 {this.state.savedArt.map(art => {
@@ -96,7 +96,7 @@ class Saved extends Component {
                                 })}
                             </List>
                         ) : (
-                                <h5>Saved works here.</h5>
+                                <p className="intro-text">Saved works here.</p>
                             )}
                     </div>
 
