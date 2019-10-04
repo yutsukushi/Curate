@@ -38,14 +38,14 @@ class SearchForm extends Component {
       }
     })
     .then(res => {
-      console.log('handleArtistSubmit: res: ', res);
     this.setState({serverResponse: res.data});
     })
   }
 
   handleSaveArtist = (event) => {
+    
     event.preventDefault();
-
+    
     let selectedArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id});
     Axios.post("/saved", selectedArtwork);
   }
@@ -93,7 +93,8 @@ class SearchForm extends Component {
                     Button={() => (
                       <div>
                         <button
-                          onClick={() => this.handleSaveArtist(card.id)}
+                        data-id={card._id}
+                          onClick={event => this.handleSaveArtist(event)}
                         >
                           +
                         </button>
