@@ -39,6 +39,9 @@
     font-weight: 200;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
   }
+  .card-info {
+    padding: 0rem .6rem;
+  }
   .art_title {
     font-weight: 500;
   }
