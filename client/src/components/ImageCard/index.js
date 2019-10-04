@@ -6,7 +6,7 @@ function ImageCard ({thumbnail, title, name, medium, date, nationality, Button }
     <div className="card">
       <img src={thumbnail} alt="artwork" className="card-img"></img>
       <div className="card-list">
-        <ul>
+        <ul className="card-info">
           <li className="art_title">{title}</li>
           <li className="medium">{medium}</li>
           <li className="artist_name">{name}</li>
