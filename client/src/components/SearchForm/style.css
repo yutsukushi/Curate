@@ -82,7 +82,7 @@
     flex: 1 1 auto;
     flex-flow: column wrap;
     font-weight: 700px;
-    background: linear-gradient(-65deg, rgb(92, 56, 10), rgb(29, 31, 29),#005500);
+    background: linear-gradient(-65deg, rgb(92, 56, 10), rgb(29, 31, 29));
     align-content: center;
     justify-content: center;
     text-align: center;
