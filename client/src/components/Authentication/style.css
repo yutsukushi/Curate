@@ -80,9 +80,11 @@ html,body {
 }
 .buttonContainer {
     display: flex;
+    flex: 0 1 auto;
     justify-content: space-between;
     padding: 1rem 0rem;
     align-items: center;
+    flex-flow: row wrap;
 }
 button {
     background: #D6C9B8;
@@ -263,5 +265,9 @@ button {
     }
 }
 
-@media (max-width:465px) { 
+@media (max-width:360px) { 
+    .buttonContainer{
+        justify-content: space-around;
+        height: 7rem;
+    }
 }
