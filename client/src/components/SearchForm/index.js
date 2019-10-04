@@ -93,8 +93,9 @@ class SearchForm extends Component {
                     Button={() => (
                       <div className="form-group-2">
                         <button
-                        data-id={card._id}
-                          onClick={event => this.handleSaveArtist(event)}
+                          className="btn-fav"
+                          data-id={card._id}
+                          onClick={(event) => this.handleSaveArtist(event)}
                         >
                           Save
                         </button>

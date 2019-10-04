@@ -52,8 +52,12 @@ button {
   color: white;
   margin: 0px;
   border: 0px;
-  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(41, 36, 29),  rgb(66, 66, 66));
+  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(54, 49, 41), rgb(66, 66, 66));
   background-size: 100% 100%;
+}
+a:hover {
+  text-decoration: none;
+  color: #8a5a00;
 }
 @keyframes gradientBG {
   0% {
@@ -74,12 +78,8 @@ button {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   a {
     color: rgba(255, 255, 255, 0.582);
   }
-}
-a:hover {
-  text-decoration: none;
-  color: #282c34;
 }
