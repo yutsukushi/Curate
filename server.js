@@ -41,41 +41,7 @@ if (process.env.NODE_ENV === "production") {
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googenheimapp";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
-
-
-
-// var databaseUrl = "googenheimapp";
-// var collections = ["artists"];
-
-// Use mongojs to hook the database to the db variable
-// var db = mongojs(databaseUrl, collections);
-
-// // function handleArtistSubmit() {
-  // app.get("/", function (req, res) {
-  //   console.log(res);
-    // Query: In our database, go to the animals collection, then "find" everything
-    // console.log("help:", res)
-    // db.Artist.find({ Artist: "Otto Wagner" }, function (err, found) {
-    //   // Log any errors if the server encounters one
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    //   // Otherwise, send the result of this query to the browser
-    //   else {
-    //     res.json(found);
-      // })
-  //   });
-  // });
-// }
-// app.get('/search', (req, res) => {
-//   console.log(res);
-//   db.collection('artists')
-//     .find(res, (err, data) => {
-//       if (err) 
-//       return console.log(err);
-//       res.send(('saved to db: ' + data));
-//   })
-// });
+mongoose.set('useFindAndModify', false);
 
 // Start the server
 app.listen(PORT, function () {

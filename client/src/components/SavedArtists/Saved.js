@@ -44,14 +44,18 @@ class Saved extends Component {
         event.preventDefault();
         let removeArtwork = _.find(this.state.savedArt, { '_id': event.target.dataset.id });
         console.log("remove artwork", removeArtwork)
-        Axios.delete(`/saved/${removeArtwork._id}`);
+        Axios.delete(`/saved/${removeArtwork._id}`)
+            .then(res => {
+            this.handlePopulateArtist();
+        }
+        );
     }
-    sansArt = id => {
-        // Filter this.state.friends for friends with an id not equal to the id being removed
-        const art = this.state.savedArt.filter(art2 => art2.id !== id);
-        // Set this.state.friends equal to the new friends array
-        this.setState({ art });
-      };
+    // sansArt = id => {
+    //     // Filter this.state.friends for friends with an id not equal to the id being removed
+    //     const art = this.state.savedArt.filter(art2 => art2.id !== id);
+    //     // Set this.state.friends equal to the new friends array
+    //     this.setState({ art });
+    //   };
     render() {
         return (
             <div className="box">
