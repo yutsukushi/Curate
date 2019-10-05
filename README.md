@@ -17,8 +17,7 @@
 ## <a name="demo"></a> Video Demonstration
 
 ![](client\public\Googenhiem.gif)
-
-You can also view the video demo in the link below
+You can view the video demo in the link below
 
 https://drive.google.com/file/d/15uzwZcC8KKbTpoWHnVLk-aMBcTLSolPy/view
 
