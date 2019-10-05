@@ -16,6 +16,14 @@
 
 ## <a name="demo"></a> Video Demonstration
 
-![](client\public\goo G gang.mp4)
+https://drive.google.com/file/d/15uzwZcC8KKbTpoWHnVLk-aMBcTLSolPy/view
 
 
+## <a name="technologies-used"></a> Technologies used to build app
+
+![](client\public\mern.jpg)
+
+  * MongoDB (https://www.mongodb.com)
+  * Express (https://expressjs.com/)
+  * REACT (https://reactjs.org/)
+  * Node (https://nodejs.org/en/)
