@@ -98,7 +98,7 @@ class CreateAcc extends Component {
           <div className="LogoContainer">
             <div className="logoText">goo ġ enheim</div>
           </div>
-          <div class="logoSubtext">
+          <div className="logoSubtext">
             goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
           </div>
         </section>
