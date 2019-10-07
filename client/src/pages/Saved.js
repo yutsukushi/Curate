@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { NavBar } from "../NavBar";
-import { Logo } from "../Logo";
-import { List, ListItem } from "../List";
-import ImageCard from "../ImageCard";
+import { NavBar } from "../components/NavBar";
+import { Logo } from "../components/Logo";
+import { List, ListItem } from "../components/List";
+import ImageCard from "../components/ImageCard";
 import Axios from "axios";
 import _ from "lodash";
 
