@@ -16,7 +16,7 @@ body {
   width: 100%;
   height: 100%;
   color: #fff;
-  background: linear-gradient(-65deg, #F4F4F4, rgb(190, 177, 159), #fff6e5, #ffffff, #F4F4F4);
+  background: linear-gradient(-65deg, #F4F4F4, rgb(190, 177, 159), #b4ac92, #ffffff, #F4F4F4);
   background-size: 400% 400%;
 }
 @keyframes gradientBG {
@@ -52,7 +52,8 @@ button {
   color: white;
   margin: 0px;
   border: 0px;
-  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(54, 49, 41), rgb(66, 66, 66));
+  background: linear-gradient(-65deg, rgb(112, 75, 45), rgb(87, 60, 35), rgb(51, 34, 4));
+  opacity: 40%;
   background-size: 100% 100%;
 }
 a:hover {

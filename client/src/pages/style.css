@@ -8,6 +8,7 @@ html,body {
 /*------------- User Login -------------*/
 .responsiveLogo {
     display: none;
+    font-style: italic;
 }
 .username {
     display: flex;
@@ -104,7 +105,7 @@ button {
     align-content: center;
     justify-content: center;
     /* will be "on top", if browser supports it */
-    background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#2e2e2e, #161616);
+    background: linear-gradient(-65deg, rgb(177, 136, 83), rgb(92, 68, 37), rgb(59, 47, 31),#2c1a03, #140c01);
     background-size: 300% 300%;
     animation: gradientBG 15s ease infinite;
     height: 100%;
@@ -136,6 +137,7 @@ button {
     background: -webkit-linear-gradient(#2D2D2D, #FFD464);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-style: italic;
     margin: 0rem;
 }
 .logoSubtext {
@@ -197,7 +199,7 @@ button {
     .responsiveLogo {
         display: flex;
         flex-flow: column nowrap;
-        flex: 1 1 auto;
+        flex: 0 0 auto;
         padding: 1.2rem;
         justify-content: center;
         align-content: center;
@@ -225,11 +227,11 @@ button {
     }
     .containerLogin {
         flex: 0 1 auto;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         order: 2;
         width: 100%;
         height: 100%;
-        background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#363636, #1f1f1f);
+        background: linear-gradient(-65deg, rgb(177, 136, 83), rgb(92, 68, 37), rgb(59, 47, 31),#2c1a03, #140c01);
         background-size: 250% 500%;
         animation: gradientBG 15s ease infinite;
     }
