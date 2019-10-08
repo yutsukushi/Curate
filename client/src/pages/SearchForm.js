@@ -1,11 +1,10 @@
 import React, {Component} from "react";
 import Axios from "axios";
-// import { Link } from "react-router-dom";
-import { List, ListItem } from "../List";
-import ImageCard from "../ImageCard";
-import { NavBar } from "../NavBar";
-import { Logo } from "../Logo";
-import "./style.css";
+import { List, ListItem } from "../components/List";
+import ImageCard from "../components/ImageCard";
+import { NavBar } from "../components/NavBar";
+import { Logo } from "../components/Logo";
+import "./style2.css";
 import _ from "lodash";
 
 class SearchForm extends Component {
@@ -114,4 +113,5 @@ class SearchForm extends Component {
     );
   }
 }
+
 export default SearchForm;

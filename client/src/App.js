@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SignIn from "./components/Authentication/Signin"
-import CreateAcc from "./components/Authentication/CreateAcc";
-import SearchForm from "./components/SearchForm";
-import Saved from "./components/SavedArtists/Saved"
+import SignIn from "./pages/Signin"
+import CreateAcc from "./pages/CreateAcc";
+import SearchForm from "./pages/SearchForm";
+import Saved from "./pages/Saved"
 import "normalize.css";
 import './App.css';
 
