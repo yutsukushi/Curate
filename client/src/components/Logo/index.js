@@ -6,7 +6,7 @@ export function Logo({children}) {
         <div className="logoContainer">
             <ul className="nav">
                 <li className=" nav-item logo-container">
-                    <h1 className="display-4" to="/">Goog Enheim
+                    <h1 className="display-4" to="/">fauve
                     <Link to="/"></Link>
                     </h1>
                 </li>

@@ -42,9 +42,9 @@ class SignIn extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
-          <div className="responsiveLogo">goo ġ enheim</div>
+          <div className="responsiveLogo">fauve</div>
           <div className="formHeader">Login</div>
-          <div className="responsiveSubtext">goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.</div>
+          <div className="responsiveSubtext">fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.]</div>
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
@@ -83,10 +83,10 @@ class SignIn extends Component {
         </section>
         <section className="containerLogo">
           <div className="LogoContainer">
-            <div className="logoText">goo ġ enheim</div>
+            <div className="logoText">fauve</div>
           </div>
           <div className="logoSubtext">
-            goo ġ (noun, Australian): An egg; an art egg; an artistic egg that’s good for searching; a good searching egg.
+            fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.]
           </div>
         </section>
       </div>

@@ -8,6 +8,7 @@ html,body {
 /*------------- User Login -------------*/
 .responsiveLogo {
     display: none;
+    font-style: italic;
 }
 .username {
     display: flex;
@@ -104,7 +105,7 @@ button {
     align-content: center;
     justify-content: center;
     /* will be "on top", if browser supports it */
-    background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(68, 50, 27), rgb(46, 38, 27),#2e2e2e, #161616);
+    background: linear-gradient(-65deg, rgb(187, 147, 96), rgb(92, 68, 37), rgb(59, 47, 31),#312e28, #161616);
     background-size: 300% 300%;
     animation: gradientBG 15s ease infinite;
     height: 100%;
@@ -136,6 +137,7 @@ button {
     background: -webkit-linear-gradient(#2D2D2D, #FFD464);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-style: italic;
     margin: 0rem;
 }
 .logoSubtext {
