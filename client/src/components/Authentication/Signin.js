@@ -86,7 +86,7 @@ class SignIn extends Component {
             <div className="logoText">fauve</div>
           </div>
           <div className="logoSubtext">
-            fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.]
+            fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.] 
           </div>
         </section>
       </div>
