@@ -8,8 +8,7 @@ module.exports = {
     var needle = req.query.name; // e.g. "Otto Wagner"
 
     db.Artist
-      .find({ Artist: needle }, ARTIST_FIELDS)
-      .sort({ date: -1 })
+      .find({ Artist: {'$regex': needle,$options:'i'} }, ARTIST_FIELDS)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
