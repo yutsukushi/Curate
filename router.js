@@ -3,12 +3,15 @@ const artistsController = require("./controllers/artistsController");
 const usersController = require("./controllers/usersController");
 const saveArtController = require("./controllers/saveArtController");
 
-router.route("/api/artists")
-  .get(artistsController.findAll)
+router
+  .route("/api/artists")
+  .get(artistsController.findAll);
+
 
 router
   .route("/api/artists/:artists")
   .get(artistsController.findById)
+  .post(artistsController.getBigImg);
  
 router
   .route("/auth/createAccount")
@@ -17,12 +20,12 @@ router
 router
   .route("/saved")
   .post(saveArtController.findAndSaveArt)
-  
   .get(saveArtController.findAndPopulate);
 
+  
   router
   .route("/saved/:id")
-  .delete(saveArtController.findAndDeleteArt)
+  .delete(saveArtController.findAndDeleteArt);
 
 router
   .route("/api/users/")

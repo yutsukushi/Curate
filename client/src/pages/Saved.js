@@ -44,6 +44,13 @@ class Saved extends Component {
         );
     }
 
+    handleFullSizeImage = (event) => {
+        event.preventDefault();
+        let imageURL = _.find(this.state.serverResponse, {
+          "URL": event.target.dataset.URL});
+          Axios.post("/saved", imageURL)
+      }
+
     render() {
         return (
             <div className="box">
@@ -71,7 +78,8 @@ class Saved extends Component {
                                                 medium={art.Medium}
                                                 name={art.Artist}
                                                 nationality={art.Nationality} 
-                                                data-id={art._id} Button={() => (
+                                                data-id={art._id} 
+                                                Button={() => (
                                                     <div className="form-group-2">
                                                         <button
                                                         data-id={art._id}

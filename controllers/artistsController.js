@@ -1,3 +1,4 @@
+var axios = require("axios");
 const db = require("../models");
 
 const ARTIST_FIELDS = 'Title Artist Nationality Date URL Medium ThumbnailURL';
@@ -8,8 +9,7 @@ module.exports = {
     var needle = req.query.name; // e.g. "Otto Wagner"
 
     db.Artist
-      .find({ Artist: needle }, ARTIST_FIELDS)
-      .sort({ date: -1 })
+      .find({ Artist: {'$regex': needle,$options:'i'} }, ARTIST_FIELDS)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -19,23 +19,37 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  create: function(req, res) {
-    db.Artist
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
-  update: function(req, res) {
-    db.Artist
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
-  remove: function(req, res) {
-    db.Artist
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  getBigImg: function (req, res) {
+    let promisedRecord = db.Artist.findById(req.params.artists);
+    promisedRecord.then(function (record) {
+      console.log("record: " + JSON.stringify(record));
+      console.log("record._id: " + record._id);
+      console.log("record.URL: " + record.URL);
+      console.log("record.Title: " + record.Title);
+      
+      let theUrl = record.URL; // Artist: URL
+      console.log("the URL: " + theUrl);
+
+      res.json(record);
+      axios.get(theUrl).then(function (response) {
+        var $ = cheerio.load(response.data);
+        var results = [];
+        $("div.work_image-container").each(function (i, element) {
+          var result = {};
+          result.image = $(this).find("picture.picture img").attr("src");
+          results.push(result)
+        });
+        var promises = []
+        for (var i = 0; i < results.length; i++) {
+          var result = results[i];
+          var bigImages = db.Artists.updateOne({ Image: result.image }, result, { upsert: true });
+          promises.push(bigImages);
+        }
+      })
+    }).catch(err => {
+      console.log("error: " + err)
+      return res.status(422).json(err);
+    });
+
   }
 };
