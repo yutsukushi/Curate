@@ -42,11 +42,17 @@ class SearchForm extends Component {
   }
 
   handleSaveArtist = (event) => {
-    
     event.preventDefault();
-    
     let selectedArtwork = _.find(this.state.serverResponse, { '_id': event.target.dataset.id});
     Axios.post("/saved", selectedArtwork);
+  }
+
+  handleFullSizeImage = (url, event) => {
+    event.preventDefault();
+    debugger;
+    let imageRecord = _.find(this.state.serverResponse, {
+      "URL": url});
+      Axios.post("/api/artists/"+ imageRecord._id)
   }
   
   render() {
@@ -89,6 +95,8 @@ class SearchForm extends Component {
                     medium={card.Medium}
                     name={card.Artist} 
                     nationality={card.Nationality}
+                    url={card.URL}
+                    handleFullSizeImage={this.handleFullSizeImage}
                     Button={() => (
                       <div className="form-group-2">
                         <button
