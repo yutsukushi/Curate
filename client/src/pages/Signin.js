@@ -41,7 +41,7 @@ class SignIn extends Component {
         <section className="containerLogin">
           <div className="responsiveLogo">Curate</div>
           <div className="formHeader">Login</div>
-          <div className="responsiveSubtext">Curate your own modern art gallery</div>
+          <div className="responsiveSubtext">Your personal gallery for modern art.</div>
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
@@ -82,9 +82,7 @@ class SignIn extends Component {
           <div className="LogoContainer">
             <div className="logoText">Curate</div>
           </div>
-          <div className="logoSubtext">
-            Curate 
-          </div>
+          <div className="logoSubtext">Your personal gallery for modern art.</div>
         </section>
       </div>
     );
