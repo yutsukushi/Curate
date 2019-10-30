@@ -39,9 +39,9 @@ class SignIn extends Component {
     return (
       <div className="loginPage">
         <section className="containerLogin">
-          <div className="responsiveLogo">fauve</div>
+          <div className="responsiveLogo">Curate</div>
           <div className="formHeader">Login</div>
-          <div className="responsiveSubtext">fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.]</div>
+          <div className="responsiveSubtext">Curate your own modern art gallery</div>
           <div className="loginForm">
             <form action="/login" method="GET">
               <div className="containerField">
@@ -80,10 +80,10 @@ class SignIn extends Component {
         </section>
         <section className="containerLogo">
           <div className="LogoContainer">
-            <div className="logoText">fauve</div>
+            <div className="logoText">Curate</div>
           </div>
           <div className="logoSubtext">
-            fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.] 
+            Curate 
           </div>
         </section>
       </div>
