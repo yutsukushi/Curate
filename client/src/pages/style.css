@@ -105,10 +105,11 @@ button {
     align-content: center;
     justify-content: center;
     /* will be "on top", if browser supports it */
-    background: linear-gradient(-65deg, rgb(177, 136, 83), rgb(92, 68, 37), rgb(59, 47, 31),#2c1a03, #140c01);
+    background: linear-gradient(-65deg, rgb(126, 99, 64), rgb(92, 68, 37), rgb(59, 47, 31),#2c2419, #140c01);
     background-size: 300% 300%;
     animation: gradientBG 15s ease infinite;
     height: 100%;
+    width: 100%;
 }
 
 @keyframes gradientBG {
