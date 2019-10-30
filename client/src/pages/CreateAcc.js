@@ -56,9 +56,9 @@ class CreateAcc extends Component {
       <div className="loginPage">
         <section className="containerLogin">
           <div className="formHeader">Create your account</div>
-          <div className="responsiveLogo">fauve
+          <div className="responsiveLogo">Curate
           </div>
-          <div className="responsiveSubtext">fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.]</div>
+          <div className="responsiveSubtext">Curate</div>
           <div className="loginForm">
             <form action="/createaccount/" method="POST">
               <div className="containerField">
@@ -96,10 +96,10 @@ class CreateAcc extends Component {
         </section>
         <section className="containerLogo">
           <div className="LogoContainer">
-            <div className="logoText">fauve</div>
+            <div className="logoText">Curate</div>
           </div>
           <div class="logoSubtext">
-            fauve (noun, French, by extension): A brownish orange color, tawny [from mid-19th c.] 
+            Curate 
           </div>
         </section>
       </div>
