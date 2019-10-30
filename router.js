@@ -11,7 +11,7 @@ router
 router
   .route("/api/artists/:artists")
   .get(artistsController.findById)
-  .post(artistsController.getBigImg);
+  // .post(artistsController.getBigImg);
  
 router
   .route("/auth/createAccount")

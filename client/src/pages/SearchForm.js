@@ -7,6 +7,11 @@ import { Logo } from "../components/Logo";
 import "./style2.css";
 import _ from "lodash";
 
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  // win.focus();
+}
+
 class SearchForm extends Component {
 
   constructor (props) {
@@ -47,13 +52,14 @@ class SearchForm extends Component {
     Axios.post("/saved", selectedArtwork);
   }
 
-  handleFullSizeImage = (url, event) => {
-    event.preventDefault();
-    debugger;
-    let imageRecord = _.find(this.state.serverResponse, {
-      "URL": url});
-      Axios.post("/api/artists/"+ imageRecord._id)
-  }
+  // handleFullSizeImage = (url, event) => {
+  //   event.preventDefault();
+  //   let imageRecord = _.find(this.state.serverResponse, {"URL": url});
+  //   let promise = Axios.post("/api/artists/"+ imageRecord._id);
+  //   promise.then(response => {
+  //     openInNewTab(response.data.bigImgUrl)
+  //   })
+  // }
   
   render() {
     return (
@@ -96,7 +102,7 @@ class SearchForm extends Component {
                     name={card.Artist} 
                     nationality={card.Nationality}
                     url={card.URL}
-                    handleFullSizeImage={this.handleFullSizeImage}
+                    // handleFullSizeImage={this.handleFullSizeImage}
                     Button={() => (
                       <div className="form-group-2">
                         <button
