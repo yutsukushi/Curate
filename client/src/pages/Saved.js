@@ -79,6 +79,7 @@ class Saved extends Component {
                                                 name={art.Artist}
                                                 nationality={art.Nationality} 
                                                 data-id={art._id} 
+                                                url={art.URL}
                                                 Button={() => (
                                                     <div className="form-group-2">
                                                         <button
