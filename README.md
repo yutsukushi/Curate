@@ -1,4 +1,4 @@
-# GoogEnheimApp
+# Curate
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ https://drive.google.com/file/d/15uzwZcC8KKbTpoWHnVLk-aMBcTLSolPy/view
 
 ## Live Deploy
 
-https://goog-enheim.herokuapp.com/
+https://curateapp-upenn.herokuapp.com/
 
 ## <a name="technologies-used"></a> Technologies used to build app
 
