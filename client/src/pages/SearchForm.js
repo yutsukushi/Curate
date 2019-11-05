@@ -4,13 +4,13 @@ import { List, ListItem } from "../components/List";
 import ImageCard from "../components/ImageCard";
 import { NavBar } from "../components/NavBar";
 import { Logo } from "../components/Logo";
-import "./style2.css";
+import "./style.css";
 import _ from "lodash";
 
-function openInNewTab(url) {
-  var win = window.open(url, '_blank');
-  // win.focus();
-}
+// function openInNewTab(url) {
+//   var win = window.open(url, '_blank');
+//   // win.focus();
+// }
 
 class SearchForm extends Component {
 
