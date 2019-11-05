@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-function ImageCard ({thumbnail, title, name, medium, url, date, nationality, Button, handleFullSizeImage}) {
+function ImageCard ({thumbnail, title, name, medium, url, date, nationality, Button}) {
   return (
     <div className="card">
       <img src={thumbnail} alt="artwork" className="card-img" 
@@ -13,7 +13,7 @@ function ImageCard ({thumbnail, title, name, medium, url, date, nationality, But
           <li className="artist_name">{name}</li>
           <li className="art_date">{date}</li>
           <li className="nationality">{nationality}</li>
-          <li className="url"><a href={url} target="_blank">More Info</a></li>
+          <li className="url"><a href={url} target="_blank" rel="noopener noreferrer">More Info</a></li>
         </ul>
         <Button />
       </div>

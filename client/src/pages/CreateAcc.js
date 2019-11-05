@@ -1,6 +1,6 @@
 import React,{ Component } from "react";
 import { Redirect, Link } from "react-router-dom";
-
+import "./style.css"
 import axios from "axios";
 
 class CreateAcc extends Component {

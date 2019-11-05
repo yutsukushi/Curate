@@ -3,6 +3,7 @@ import { NavBar } from "../components/NavBar";
 import { Logo } from "../components/Logo";
 import { List, ListItem } from "../components/List";
 import ImageCard from "../components/ImageCard";
+import "./style.css"
 import Axios from "axios";
 import _ from "lodash";
 
