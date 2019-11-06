@@ -7,8 +7,7 @@ function ImageCard ({thumbnail, title, name, medium, url, date, nationality, But
   
   return (
     <div className="card">
-      <img src={thumbnail} alt="artwork" className="card-img" 
-      onClick={(event) => handleFullSizeImage(url, event)}/>
+      <img src={thumbnail} alt="artwork" className="card-img"/>
       
       <div className="card-list">
         <ul className="card-info">
