@@ -95,6 +95,7 @@ button {
     border-radius: 4px;
     stroke: #D6C9B8;
     text-align: center;
+    opacity: 100%!important;
 }
 
 /*------------- Intro Style (Right Side) -------------*/
